@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(LineRenderer))]
 public class TrajectoryLine : MonoBehaviour
 {
-    public LineRenderer lr;
+    LineRenderer lr;
 
     private void Awake()
     {
