@@ -266,9 +266,9 @@ MonoBehaviour:
   m_Spline:
     m_IsOpenEnded: 1
     m_ControlPoints:
-    - position: {x: 0.31502953, y: -0.92354894, z: 0}
-      leftTangent: {x: -1.330857, y: -0.2340486, z: 0}
-      rightTangent: {x: 1.3748738, y: 0.24179077, z: 0}
+    - position: {x: 0.3150349, y: -0.92354894, z: 0}
+      leftTangent: {x: -1.351236, y: 0.012099624, z: 0}
+      rightTangent: {x: 1.4351783, y: -0.012851238, z: 0}
       mode: 1
       height: 1
       bevelCutoff: 0
@@ -367,8 +367,8 @@ SpriteShapeRenderer:
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   m_LocalAABB:
-    m_Center: {x: 1.8241925, y: -0.17000026, z: 0}
-    m_Extent: {x: 1.5230194, y: 0.8323396, z: 0}
+    m_Center: {x: 1.8307651, y: -0.17060322, z: 0}
+    m_Extent: {x: 1.5164466, y: 0.83294255, z: 0}
 --- !u!4 &470851533
 Transform:
   m_ObjectHideFlags: 0
@@ -399,11 +399,12 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 1.06
   m_Points:
-  - {x: 0.3151681, y: -0.92433685}
-  - {x: 0.82853705, y: -0.8055214}
-  - {x: 1.1764861, y: -0.66711956}
-  - {x: 1.5116048, y: -0.44348145}
-  - {x: 1.7746396, y: -0.3653588}
+  - {x: 0.31502774, y: -0.92434895}
+  - {x: 0.8458101, y: -0.8898719}
+  - {x: 1.0962745, y: -0.8285457}
+  - {x: 1.3556899, y: -0.6695431}
+  - {x: 1.5912108, y: -0.45105577}
+  - {x: 1.7758354, y: -0.3772649}
   - {x: 2.4068449, y: -0.3341533}
   - {x: 2.6732008, y: -0.28425965}
   - {x: 2.879531, y: -0.19881535}
@@ -651,10 +652,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 156d3644449233945a53343e0905a27f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power: 10
+  power: 30
   rb: {fileID: 641089484}
-  minPower: {x: -15, y: -15}
-  maxPower: {x: 15, y: 15}
+  minPower: {x: -10, y: -10}
+  maxPower: {x: 10, y: 10}
 --- !u!120 &641089489
 LineRenderer:
   m_ObjectHideFlags: 0
