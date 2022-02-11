@@ -5,9 +5,9 @@ using UnityEngine;
 public class BallGravity : MonoBehaviour
 {
     Rigidbody2D rb;
-    public Collider2D topCollider;
-    public Collider2D downCollider;
-    public Collider2D colliderCancel;
+    public Collider2D[] topCollider;
+    public Collider2D[] downCollider;
+    public Collider2D[] colliderCancel;
 
     private void Start()
     {
@@ -16,27 +16,41 @@ public class BallGravity : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision == topCollider)
+        for (int j = 0; j < topCollider.Length; j++)
         {
-            rb.gravityScale = -1;
+            if (collision == topCollider[j])
+            {
+                rb.gravityScale = -1;
+            }
         }
 
-        if (collision == downCollider)
+        for (int k = 0; k < downCollider.Length; k++)
         {
-            rb.gravityScale = 1;
+            if (collision == downCollider[k])
+            {
+                rb.gravityScale = 1;
+            }
         }
 
-        if (collision == colliderCancel)
+        for (int i = 0; i < colliderCancel.Length; i++)
         {
-            rb.gravityScale *= 0;
+            if (collision == colliderCancel[i])
+            {
+                //Debug.Log("Collision avec le cancel");
+                rb.gravityScale *= 0;
+            }
+
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision == colliderCancel)
+        for (int i = 0; i < colliderCancel.Length; i++)
         {
-            rb.gravityScale = 1;
+            if (collision == colliderCancel[i])
+            {
+                rb.gravityScale = 1;
+            }
         }
     }
 }
