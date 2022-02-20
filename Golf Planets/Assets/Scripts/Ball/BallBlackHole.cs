@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BallBlackHole : MonoBehaviour
 {
-    public GameObject planet;
+    /*public GameObject planet;
 
     public float maxGravity;
     public float maxGravityDist;
@@ -26,5 +26,5 @@ public class BallBlackHole : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(planet.transform.position, maxGravityDist);
-    }
+    }*/
 }

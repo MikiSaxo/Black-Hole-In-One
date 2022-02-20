@@ -33,14 +33,14 @@ public class BumperScript : MonoBehaviour
     {
         yield return new WaitForSeconds(timeToLauchBumper);
         rbBall.AddForce(transform.up * power, ForceMode2D.Impulse);
-        c_bumper.isTrigger = false;
+        //c_bumper.isTrigger = false;
         //gameObject.transform.DOMoveY(gameObject.transform.position.y + maxHighExpend, timeExpend).OnComplete(InitialPosition);
     }
 
-    void InitialPosition()
+    /*void InitialPosition()
     {
         Debug.Log("bumper revient à sa place");
         //gameObject.transform.DOMoveY(initialPos, timeRecover);
         c_bumper.isTrigger = true;
-    }
+    }*/
 }
