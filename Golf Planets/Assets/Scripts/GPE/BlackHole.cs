@@ -15,7 +15,7 @@ public class BlackHole : MonoBehaviour
         float dist = Vector2.Distance(ball.transform.position, transform.position);
 
 
-        if (dist <= maxGravityDist)
+        if (dist <= maxGravityDist && !PauseMenu.Instance.GameIsPaused)
         {
             Vector3 v = ball.transform.position - transform.position;
             rbBall.AddForce(v.normalized * (1f - dist / maxGravityDist) * maxGravity * -1);

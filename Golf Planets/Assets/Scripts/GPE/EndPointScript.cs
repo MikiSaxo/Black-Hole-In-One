@@ -12,7 +12,7 @@ public class EndPointScript : MonoBehaviour
         if (collision = ball)
         {
             Debug.Log("restart game");
-            Application.LoadLevel(0);
+            Application.LoadLevel("MainGame");
         }
     }
 }
