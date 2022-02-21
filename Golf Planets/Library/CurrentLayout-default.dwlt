@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1357
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Scene
   m_RootView: {fileID: 9}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -97,10 +97,10 @@ MonoBehaviour:
     y: 650
     width: 2066
     height: 657
-  m_MinSize: {x: 303, y: 221}
-  m_MaxSize: {x: 8003, y: 4021}
+  m_MinSize: {x: 301, y: 221}
+  m_MaxSize: {x: 8001, y: 4021}
   vertical: 0
-  controlID: 21
+  controlID: 174
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -148,10 +148,10 @@ MonoBehaviour:
     y: 30
     width: 2560
     height: 1307
-  m_MinSize: {x: 909, y: 492}
-  m_MaxSize: {x: 22004, y: 14042}
+  m_MinSize: {x: 910, y: 492}
+  m_MaxSize: {x: 22005, y: 14042}
   vertical: 0
-  controlID: 57
+  controlID: 26
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -171,8 +171,8 @@ MonoBehaviour:
     y: 0
     width: 494
     height: 1307
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -197,8 +197,8 @@ MonoBehaviour:
     y: 0
     width: 973
     height: 657
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
@@ -299,10 +299,10 @@ MonoBehaviour:
     y: 0
     width: 2066
     height: 1307
-  m_MinSize: {x: 633, y: 492}
-  m_MaxSize: {x: 18003, y: 14042}
+  m_MinSize: {x: 635, y: 492}
+  m_MaxSize: {x: 18005, y: 14042}
   vertical: 1
-  controlID: 83
+  controlID: 27
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -325,10 +325,10 @@ MonoBehaviour:
     y: 0
     width: 2066
     height: 650
-  m_MinSize: {x: 633, y: 271}
-  m_MaxSize: {x: 18003, y: 10021}
+  m_MinSize: {x: 635, y: 271}
+  m_MaxSize: {x: 18005, y: 10021}
   vertical: 0
-  controlID: 84
+  controlID: 28
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -348,8 +348,8 @@ MonoBehaviour:
     y: 0
     width: 1164
     height: 650
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -419,22 +419,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\AppliC\Unity Projects\Golf-avec-une-Golf\Golf Planets
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: e2440000
-    m_LastClickedID: 17634
-    m_ExpandedIDs: 00000000d4440000e84400001e4500002045000000ca9a3b
+    m_SelectedIDs: 3e440000
+    m_LastClickedID: 17470
+    m_ExpandedIDs: 000000002c4400002e440000304400004044000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -462,7 +462,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d4440000
+    m_ExpandedIDs: 000000002c4400002e44000030440000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -583,9 +583,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: b2590000
-      m_LastClickedID: 22962
-      m_ExpandedIDs: 14f2ffff7ef2ffff28f3ffffa6f3ffff46f4ffffd2f4ffff68faffffd64300000c44000018440000ae590000c4590000d8590000fa590000065a0000325a0000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 8272ffff6073ffff8c73ffffa07cffff607effff5e85fffff6a2ffff42a3ffff20a4ffffa6a4ffffa6a5ffff6aa8ffffeca8ffff60adffffbaadffff0cb1ffff86b1ffff08b2ffffbcbfffff6ac7ffff64c8ffff12cbffffc4cdffff66ceffffb2dcffffccdcffffaeddffff2edeffff50deffff60dfffff18fbfffffc42000032430000046900000e6900007c6c0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -645,9 +645,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 36.09824, y: 5.7534833, z: -48.111336}
+    m_Target: {x: 51.15794, y: -4.5077763, z: -0.60206175}
     speed: 2
-    m_Value: {x: 36.09824, y: 5.7534833, z: -48.111336}
+    m_Value: {x: 51.15794, y: -4.5077763, z: -0.60206175}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -698,9 +698,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 42.292072
+    m_Target: 23.55759
     speed: 2
-    m_Value: 42.292072
+    m_Value: 23.55759
   m_Ortho:
     m_Target: 1
     speed: 2
