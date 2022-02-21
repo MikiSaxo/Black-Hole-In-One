@@ -3871,11 +3871,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8856331969235501327, guid: c6b553c62a3f3bf4694eb05645c848d4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 67.13
+      value: -45.23
       objectReference: {fileID: 0}
     - target: {fileID: 8856331969235501327, guid: c6b553c62a3f3bf4694eb05645c848d4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.13
+      value: -17.23
       objectReference: {fileID: 0}
     - target: {fileID: 8856331969235501327, guid: c6b553c62a3f3bf4694eb05645c848d4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3965,6 +3965,10 @@ PrefabInstance:
     - target: {fileID: 4297296110420430585, guid: 35ec5e1bfee147a4dbed3c810c14d880, type: 3}
       propertyPath: m_Name
       value: Bumper
+      objectReference: {fileID: 0}
+    - target: {fileID: 4297296110420430586, guid: 35ec5e1bfee147a4dbed3c810c14d880, type: 3}
+      propertyPath: power
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 4297296110420430586, guid: 35ec5e1bfee147a4dbed3c810c14d880, type: 3}
       propertyPath: rbBall
@@ -4144,6 +4148,10 @@ PrefabInstance:
     - target: {fileID: 8625535493795310739, guid: ffb63edec8b4417489150653657f5040, type: 3}
       propertyPath: m_Name
       value: Ball
+      objectReference: {fileID: 0}
+    - target: {fileID: 8625535493795310740, guid: ffb63edec8b4417489150653657f5040, type: 3}
+      propertyPath: m_Mass
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8625535493795310743, guid: ffb63edec8b4417489150653657f5040, type: 3}
       propertyPath: m_RootOrder
