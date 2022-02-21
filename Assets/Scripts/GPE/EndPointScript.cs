@@ -13,7 +13,7 @@ public class EndPointScript : MonoBehaviour
         if (collision = ball)
         {
             Debug.Log("restart game");
-            SceneManager.LoadScene("MainGame");
+            //SceneManager.LoadScene("MainGame");
         }
     }
 }
