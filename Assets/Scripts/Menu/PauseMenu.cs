@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public bool GameIsPaused = false;
-    public GameObject PauseMenuUI;
-    public GameObject NextLevel;
+    public GameObject pauseMenuUI;
+    public GameObject nextLevel;
 
     public static PauseMenu Instance;
 
@@ -33,15 +33,15 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
-        PauseMenuUI.SetActive(false);
-        NextLevel.SetActive(false);
+        pauseMenuUI.SetActive(false);
+        nextLevel.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
 
     void Pause()
     {
-        PauseMenuUI.SetActive(true);
+        pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
