@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class ManageLevel : MonoBehaviour
 {
+    public TrailRenderer tr;
     public GameObject[] SpawnPoint;
     public Collider2D[] EndPoint;
     public GameObject NextLevel;
+    public Rigidbody2D rb;
+    public int cntEnd = 0;
+    public int cntSpawn = 1;
 
     private void Start()
     {
@@ -15,12 +19,17 @@ public class ManageLevel : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision == EndPoint[0])
+        if (collision == EndPoint[cntEnd])
         {
             Debug.Log("endpoint");
+            cntEnd++;
+            tr.enabled = false;
             NextLevel.SetActive(true);
             Time.timeScale = 0f;
-            gameObject.transform.position = SpawnPoint[1].transform.position;
+            gameObject.transform.position = SpawnPoint[cntSpawn].transform.position;
+            rb.velocity = Vector2.zero;
+            tr.enabled = true;
+            cntSpawn++;
         }
     }
 }
