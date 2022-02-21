@@ -6,6 +6,7 @@ public class ManageLevel : MonoBehaviour
 {
     public GameObject[] SpawnPoint;
     public Collider2D[] EndPoint;
+    public GameObject NextLevel;
 
     private void Start()
     {
@@ -17,6 +18,8 @@ public class ManageLevel : MonoBehaviour
         if (collision == EndPoint[0])
         {
             Debug.Log("endpoint");
+            NextLevel.SetActive(true);
+            Time.timeScale = 0f;
             gameObject.transform.position = SpawnPoint[1].transform.position;
         }
     }

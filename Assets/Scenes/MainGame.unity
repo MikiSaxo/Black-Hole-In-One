@@ -2346,6 +2346,7 @@ MonoBehaviour:
   - {fileID: 729146505}
   EndPoint:
   - {fileID: 44849682}
+  NextLevel: {fileID: 151818511}
 --- !u!96 &1519823854
 TrailRenderer:
   serializedVersion: 2
@@ -2538,6 +2539,34 @@ PrefabInstance:
     - target: {fileID: 897833992047294667, guid: 268077fde5474d641bf107f46aa81518, type: 3}
       propertyPath: m_Name
       value: Quit
+      objectReference: {fileID: 0}
+    - target: {fileID: 2633934260717759757, guid: 268077fde5474d641bf107f46aa81518, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2633934260717759757, guid: 268077fde5474d641bf107f46aa81518, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2633934260717759757, guid: 268077fde5474d641bf107f46aa81518, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1676525299}
+    - target: {fileID: 2633934260717759757, guid: 268077fde5474d641bf107f46aa81518, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2633934260717759757, guid: 268077fde5474d641bf107f46aa81518, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GoToMainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2633934260717759757, guid: 268077fde5474d641bf107f46aa81518, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PauseMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2633934260717759757, guid: 268077fde5474d641bf107f46aa81518, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6541875169862047819, guid: 268077fde5474d641bf107f46aa81518, type: 3}
       propertyPath: m_text
@@ -2779,7 +2808,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameIsPaused: 0
-  pauseMenuUI: {fileID: 275889204}
+  PauseMenuUI: {fileID: 275889204}
+  NextLevel: {fileID: 151818511}
 --- !u!1 &1714807962
 GameObject:
   m_ObjectHideFlags: 0
