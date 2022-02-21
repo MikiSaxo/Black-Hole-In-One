@@ -452,7 +452,7 @@ GameObject:
   m_Component:
   - component: {fileID: 151818512}
   m_Layer: 5
-  m_Name: NextLevel
+  m_Name: NextLevelMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2571,7 +2571,7 @@ MonoBehaviour:
   - {fileID: 44849682}
   - {fileID: 67504628}
   - {fileID: 1996908896}
-  NextLevel: {fileID: 151818511}
+  nextLevelMenu: {fileID: 151818511}
   rb: {fileID: 641089484}
   cntEnd: 0
   cntSpawn: 1
@@ -2682,6 +2682,11 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!212 &1519823855 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8625535493795310742, guid: ffb63edec8b4417489150653657f5040, type: 3}
+  m_PrefabInstance: {fileID: 8625535493356344152}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1523456941
 GameObject:
   m_ObjectHideFlags: 0
@@ -3137,8 +3142,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameIsPaused: 0
-  PauseMenuUI: {fileID: 275889204}
-  NextLevel: {fileID: 151818511}
+  pauseMenuUI: {fileID: 0}
+  nextLevel: {fileID: 0}
 --- !u!1 &1714807962
 GameObject:
   m_ObjectHideFlags: 0
@@ -4281,11 +4286,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8856331969235501327, guid: c6b553c62a3f3bf4694eb05645c848d4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 147.28
+      value: 137.7
       objectReference: {fileID: 0}
     - target: {fileID: 8856331969235501327, guid: c6b553c62a3f3bf4694eb05645c848d4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10
+      value: -16.7
       objectReference: {fileID: 0}
     - target: {fileID: 8856331969235501327, guid: c6b553c62a3f3bf4694eb05645c848d4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4515,6 +4520,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8625535493795310728, guid: ffb63edec8b4417489150653657f5040, type: 3}
+      propertyPath: sprBall
+      value: 
+      objectReference: {fileID: 1519823855}
     - target: {fileID: 8625535493795310731, guid: ffb63edec8b4417489150653657f5040, type: 3}
       propertyPath: topCollider.Array.data[0]
       value: 
