@@ -14,7 +14,7 @@ public class ManageLevel : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision = EndPoint[0])
+        if (collision == EndPoint[0])
         {
             Debug.Log("endpoint");
             gameObject.transform.position = SpawnPoint[1].transform.position;
