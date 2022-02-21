@@ -19,9 +19,9 @@ MonoBehaviour:
     width: 2560
     height: 1357
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Hierarchy
   m_RootView: {fileID: 9}
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -69,8 +69,8 @@ MonoBehaviour:
     y: 0
     width: 1093
     height: 657
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -97,10 +97,10 @@ MonoBehaviour:
     y: 650
     width: 2066
     height: 657
-  m_MinSize: {x: 301, y: 221}
-  m_MaxSize: {x: 8001, y: 4021}
+  m_MinSize: {x: 303, y: 221}
+  m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 174
+  controlID: 110
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -148,10 +148,10 @@ MonoBehaviour:
     y: 30
     width: 2560
     height: 1307
-  m_MinSize: {x: 910, y: 492}
-  m_MaxSize: {x: 22005, y: 14042}
+  m_MinSize: {x: 907, y: 492}
+  m_MaxSize: {x: 22002, y: 14042}
   vertical: 0
-  controlID: 26
+  controlID: 108
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -299,10 +299,10 @@ MonoBehaviour:
     y: 0
     width: 2066
     height: 1307
-  m_MinSize: {x: 635, y: 492}
-  m_MaxSize: {x: 18005, y: 14042}
+  m_MinSize: {x: 632, y: 492}
+  m_MaxSize: {x: 18002, y: 14042}
   vertical: 1
-  controlID: 27
+  controlID: 109
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -325,10 +325,10 @@ MonoBehaviour:
     y: 0
     width: 2066
     height: 650
-  m_MinSize: {x: 635, y: 271}
-  m_MaxSize: {x: 18005, y: 10021}
+  m_MinSize: {x: 632, y: 271}
+  m_MaxSize: {x: 18002, y: 10021}
   vertical: 0
-  controlID: 28
+  controlID: 17
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -419,22 +419,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts/Ball
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts/Ball
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\AppliC\Unity Projects\Golf-avec-une-Golf\Golf Planets
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 3e440000
-    m_LastClickedID: 17470
-    m_ExpandedIDs: 000000002c4400002e440000304400004044000000ca9a3b
+    m_SelectedIDs: 04460000
+    m_LastClickedID: 17924
+    m_ExpandedIDs: 000000003e45000040450000424500005445000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -462,7 +462,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000002c4400002e44000030440000
+    m_ExpandedIDs: 000000003e4500004045000042450000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -585,7 +585,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 8272ffff6073ffff8c73ffffa07cffff607effff5e85fffff6a2ffff42a3ffff20a4ffffa6a4ffffa6a5ffff6aa8ffffeca8ffff60adffffbaadffff0cb1ffff86b1ffff08b2ffffbcbfffff6ac7ffff64c8ffff12cbffffc4cdffff66ceffffb2dcffffccdcffffaeddffff2edeffff50deffff60dfffff18fbfffffc42000032430000046900000e6900007c6c0000
+      m_ExpandedIDs: 5efbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
