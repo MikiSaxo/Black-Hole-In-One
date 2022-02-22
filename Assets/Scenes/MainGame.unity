@@ -1479,7 +1479,7 @@ MonoBehaviour:
   sharedProfile: {fileID: 11400000, guid: f6179a86a52510b4b9f33327c0a889ee, type: 2}
   isGlobal: 1
   blendDistance: 0
-  weight: 1
+  weight: 0.807
   priority: 0
 --- !u!114 &519420034
 MonoBehaviour:
@@ -1568,7 +1568,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RippleMaterial: {fileID: 2100000, guid: 25463256194889241b3c682daae10617, type: 2}
   MaxAmount: 20
-  Friction: 0.95
+  Friction: 0.98
 --- !u!1001 &533119606
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4423,6 +4423,36 @@ SpriteShapeRenderer:
   m_LocalAABB:
     m_Center: {x: 0.018360138, y: 0.76165867, z: 0}
     m_Extent: {x: 18.852554, y: 10.023609, z: 0}
+--- !u!1 &1870371966
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1870371967}
+  m_Layer: 0
+  m_Name: Niveaux
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1870371967
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870371966}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 67.78966, y: 62.942844, z: -239.47858}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1895148343
 GameObject:
   m_ObjectHideFlags: 0
@@ -5129,11 +5159,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8856331969235501327, guid: c6b553c62a3f3bf4694eb05645c848d4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 141.85
+      value: 142.34
       objectReference: {fileID: 0}
     - target: {fileID: 8856331969235501327, guid: c6b553c62a3f3bf4694eb05645c848d4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -16.43
+      value: -18.9
       objectReference: {fileID: 0}
     - target: {fileID: 8856331969235501327, guid: c6b553c62a3f3bf4694eb05645c848d4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5655,7 +5685,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1519823853, guid: ffb63edec8b4417489150653657f5040, type: 3}
       propertyPath: howManyShootNeeded.Array.data[0]
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1519823853, guid: ffb63edec8b4417489150653657f5040, type: 3}
       propertyPath: howManyShootNeeded.Array.data[1]
