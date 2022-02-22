@@ -11,6 +11,7 @@ public class ManageLevel : MonoBehaviour
     public Rigidbody2D rb;
     public int cntEnd = 0;
     public int cntSpawn = 1;
+    [SerializeField] private RipplePostProcessor camRipple;
 
     public static ManageLevel Instance;
 
@@ -30,10 +31,11 @@ public class ManageLevel : MonoBehaviour
         {
             //StartCoroutine(Transi());
             Debug.Log("endpoint");
+            camRipple.RippleEffect();
             cntEnd++;
             tr.emitting = false;
             nextLevelMenu.SetActive(true);
-            Time.timeScale = 0f;
+            //Time.timeScale = 0f;
             rb.velocity = Vector2.zero;
         }
     }

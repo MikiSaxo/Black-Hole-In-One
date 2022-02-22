@@ -1127,6 +1127,7 @@ GameObject:
   m_Component:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
+  - component: {fileID: 519420036}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
   - component: {fileID: 519420035}
@@ -1309,6 +1310,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   volume: {fileID: 519420033}
+--- !u!114 &519420036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e15c830531ea0054c928fc961ecab139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RippleMaterial: {fileID: 2100000, guid: 25463256194889241b3c682daae10617, type: 2}
+  MaxAmount: 20
+  Friction: 0.99
 --- !u!1001 &533119606
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4521,11 +4537,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8856331969235501327, guid: c6b553c62a3f3bf4694eb05645c848d4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 61.8
+      value: 141.85
       objectReference: {fileID: 0}
     - target: {fileID: 8856331969235501327, guid: c6b553c62a3f3bf4694eb05645c848d4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -18.7
+      value: -16.43
       objectReference: {fileID: 0}
     - target: {fileID: 8856331969235501327, guid: c6b553c62a3f3bf4694eb05645c848d4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4781,6 +4797,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1519823853, guid: ffb63edec8b4417489150653657f5040, type: 3}
+      propertyPath: camRipple
+      value: 
+      objectReference: {fileID: 519420036}
     - target: {fileID: 1519823853, guid: ffb63edec8b4417489150653657f5040, type: 3}
       propertyPath: nextLevelMenu
       value: 
