@@ -151,6 +151,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 59.830833}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1640082865}
   m_RootOrder: 0
@@ -203,6 +204,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 1823875761}
     m_Modifications:
     - target: {fileID: 5996257563885504292, guid: b13b9695e3e55624c87b8a480261af41, type: 3}
@@ -354,12 +356,14 @@ PrefabInstance:
       value: Credits
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: b13b9695e3e55624c87b8a480261af41, type: 3}
 --- !u!1001 &315203419
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 1823875761}
     m_Modifications:
     - target: {fileID: 5996257563885504292, guid: b13b9695e3e55624c87b8a480261af41, type: 3}
@@ -483,6 +487,7 @@ PrefabInstance:
       value: Quit
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: b13b9695e3e55624c87b8a480261af41, type: 3}
 --- !u!1 &331877162
 GameObject:
@@ -512,6 +517,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 92.32545}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1272700322}
   m_RootOrder: 1
@@ -541,10 +547,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Clic gauche souris : maintenir cette touche enfonc\xE9e pour pouvoir frapper
-    la balle plus ou moins violemment et de choisir dans quelle direction elle va
-    \xEAtre envoy\xE9e\n\nEspace : permet de ralentir le temps\n\nEchap : permet
-    d'acc\xE9der au menu Pause pendant les niveaux"
+  m_text: 'Left mouse click: keep this button pressed to be able to hit the ball
+    more or less violently and to choose in which direction it will be sent
+
+    
+
+    Space:
+    allows you to slow down time
+
+    
+
+    Esc: access the pause menu during levels'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -653,6 +666,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -59.830833}
   m_LocalScale: {x: 0.70686, y: 0.70686, z: 0.70686}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1068462526}
   - {fileID: 783569078}
@@ -695,6 +709,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 1640082865}
     m_Modifications:
     - target: {fileID: 5996257563885504292, guid: b13b9695e3e55624c87b8a480261af41, type: 3}
@@ -848,6 +863,7 @@ PrefabInstance:
       value: Back
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: b13b9695e3e55624c87b8a480261af41, type: 3}
 --- !u!224 &783569078 stripped
 RectTransform:
@@ -887,6 +903,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 59.830833}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 507385847}
   m_RootOrder: 0
@@ -960,6 +977,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 7.6151733, y: -0.7865143, z: -92.32545}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1640082865}
   - {fileID: 331877163}
@@ -976,6 +994,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 507385847}
     m_Modifications:
     - target: {fileID: 5996257563885504292, guid: b13b9695e3e55624c87b8a480261af41, type: 3}
@@ -1127,12 +1146,14 @@ PrefabInstance:
       value: Back
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: b13b9695e3e55624c87b8a480261af41, type: 3}
 --- !u!1001 &1473918402
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 1823875761}
     m_Modifications:
     - target: {fileID: 5996257563885504292, guid: b13b9695e3e55624c87b8a480261af41, type: 3}
@@ -1288,6 +1309,7 @@ PrefabInstance:
       value: Commands
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: b13b9695e3e55624c87b8a480261af41, type: 3}
 --- !u!1 &1498299887
 GameObject:
@@ -1368,6 +1390,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -1434,6 +1457,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -1470,6 +1494,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 41.263447}
   m_LocalScale: {x: 0.70686, y: 0.70686, z: 0.70686}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 237385944}
   - {fileID: 845934462}
@@ -1540,13 +1565,14 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1815631343}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000030517578, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -0.0001, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1755605150
@@ -1664,6 +1690,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -1677,6 +1704,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1755605149}
   - {fileID: 1823875761}
@@ -1744,6 +1772,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -46.429}
   m_LocalScale: {x: 0.67208, y: 0.67208, z: 0.67208}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1527228864}
   - {fileID: 393721597}
@@ -1774,6 +1803,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 1823875761}
     m_Modifications:
     - target: {fileID: 5996257563885504292, guid: b13b9695e3e55624c87b8a480261af41, type: 3}
@@ -1897,4 +1927,5 @@ PrefabInstance:
       value: Play
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: b13b9695e3e55624c87b8a480261af41, type: 3}
