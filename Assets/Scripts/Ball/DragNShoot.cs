@@ -112,7 +112,10 @@ public class DragNShoot : MonoBehaviour
                 force = new Vector2(Mathf.Clamp(startPoint.x - endPoint.x, minPower.x, maxPower.x), Mathf.Clamp(startPoint.y - endPoint.y, minPower.y, maxPower.y));
                 rb.AddForce(force * power, ForceMode2D.Impulse);
                 tl.EndLine();
-                ManageLevel.Instance.howManyShoot++;
+                if (!PauseMenu.Instance.GameIsPaused)
+                {
+                    ManageLevel.Instance.howManyShoot++;
+                }
                 if (canReShoot)
                 {
                     Debug.Log("Desac le collider");
