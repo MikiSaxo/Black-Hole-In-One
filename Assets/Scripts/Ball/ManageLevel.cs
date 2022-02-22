@@ -12,6 +12,13 @@ public class ManageLevel : MonoBehaviour
     public int cntEnd = 0;
     public int cntSpawn = 1;
 
+    public static ManageLevel Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     private void Start()
     {
         gameObject.transform.position = SpawnPoint[0].transform.position;
@@ -21,15 +28,24 @@ public class ManageLevel : MonoBehaviour
     {
         if (collision == EndPoint[cntEnd])
         {
+            //StartCoroutine(Transi());
             Debug.Log("endpoint");
             cntEnd++;
-            tr.enabled = false;
+            tr.emitting = false;
             nextLevelMenu.SetActive(true);
             Time.timeScale = 0f;
-            gameObject.transform.position = SpawnPoint[cntSpawn].transform.position;
             rb.velocity = Vector2.zero;
-            tr.enabled = true;
-            cntSpawn++;
         }
     }
+
+    //IEnumerator Transi()
+    //{
+    //    Debug.Log("endpoint");
+    //    cntEnd++;
+    //    tr.emitting = false;
+    //    yield return new WaitForSeconds(.01f);
+    //    nextLevelMenu.SetActive(true);
+    //    Time.timeScale = 0f;
+    //    rb.velocity = Vector2.zero;
+    //}
 }

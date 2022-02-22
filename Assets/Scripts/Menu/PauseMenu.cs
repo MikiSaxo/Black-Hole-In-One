@@ -8,6 +8,7 @@ public class PauseMenu : MonoBehaviour
     public bool GameIsPaused = false;
     public GameObject pauseMenuUI;
     public GameObject nextLevel;
+    public GameObject ball;
 
     public static PauseMenu Instance;
 
@@ -37,6 +38,23 @@ public class PauseMenu : MonoBehaviour
         nextLevel.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
+    }
+
+    public void NextLevel()
+    {
+        StartCoroutine(TpBall());
+        pauseMenuUI.SetActive(false);
+        nextLevel.SetActive(false);
+        Time.timeScale = 1f;
+        GameIsPaused = false;
+    }
+
+    IEnumerator TpBall()
+    {
+        ball.transform.position = ManageLevel.Instance.SpawnPoint[ManageLevel.Instance.cntSpawn].transform.position;
+        yield return new WaitForSeconds(.01f);
+        ManageLevel.Instance.cntSpawn++;
+        ManageLevel.Instance.tr.emitting = true;
     }
 
     void Pause()
