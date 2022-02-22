@@ -47,7 +47,7 @@ public class DragNShoot : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(collisionCount);
+        Debug.Log(rb.velocity.magnitude);
         if (rb.velocity.magnitude <= ValueToReShoot && collisionCount == 1)
         {
             sprBall.color = Color.green;

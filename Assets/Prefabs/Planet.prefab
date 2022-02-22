@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9d80e3d6e1229147a6e8f9a67f4dcc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ball: {fileID: 0}
+  ball: {fileID: 8625535493795310739, guid: ffb63edec8b4417489150653657f5040, type: 3}
   maxGravity: 600
   maxGravityDist: 14.77
-  rbBall: {fileID: 0}
+  rbBall: {fileID: 8625535493795310740, guid: ffb63edec8b4417489150653657f5040, type: 3}
