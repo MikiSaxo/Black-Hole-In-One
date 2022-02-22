@@ -51,6 +51,7 @@ public class DragNShoot : MonoBehaviour
         if (rb.velocity.magnitude <= ValueToReShoot && collisionCount == 1)
         {
             sprBall.color = Color.green;
+            rb.velocity = Vector2.zero;
             if (Input.GetMouseButtonDown(0))
             {
                 startPoint = cam.ScreenToWorldPoint(Input.mousePosition);
