@@ -9,6 +9,11 @@ public class DragNShoot : MonoBehaviour
 
     public Rigidbody2D rb;
     public SpriteRenderer sprBall;
+    public Collider2D[] reShootCollider;
+    bool canReShoot;
+    public Collider2D saveCollider;
+    public float timeScaleInZone = .5f;
+    const float timeScaleSlowMo = .02f;
 
     public Vector2 minPower;
     public Vector2 maxPower;
@@ -37,7 +42,6 @@ public class DragNShoot : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         collisionCount = 1;
-
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -45,13 +49,48 @@ public class DragNShoot : MonoBehaviour
         collisionCount = 0;
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        for (int j = 0; j < reShootCollider.Length; j++)
+        {
+            if (collision == reShootCollider[j])
+            {
+                canReShoot = true;
+                //cam.GetComponent<PostProcessingCamera>().ChangeColor();
+                PostProcessingCamera.Instance.ChangeColor(true);
+                saveCollider = collision;
+                Time.timeScale = timeScaleInZone;
+                Time.fixedDeltaTime = timeScaleSlowMo * Time.timeScale;
+            }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        for (int j = 0; j < reShootCollider.Length; j++)
+        {
+            if (collision == reShootCollider[j])
+            {
+                canReShoot = false;
+                //saveCollider.enabled = true;
+                Time.timeScale = 1f;
+                Time.fixedDeltaTime = timeScaleSlowMo * Time.timeScale;
+                PostProcessingCamera.Instance.ChangeColor(false);
+
+            }
+        }
+    }
+
     private void Update()
     {
-        Debug.Log(rb.velocity.magnitude);
-        if (rb.velocity.magnitude <= ValueToReShoot && collisionCount == 1)
+        //Debug.Log(rb.velocity.magnitude);
+        if ((rb.velocity.magnitude <= ValueToReShoot && collisionCount == 1) || canReShoot)
         {
             sprBall.color = Color.green;
-            rb.velocity = Vector2.zero;
+            if (!canReShoot)
+            {
+                rb.velocity = Vector2.zero;
+            }
             if (Input.GetMouseButtonDown(0))
             {
                 startPoint = cam.ScreenToWorldPoint(Input.mousePosition);
@@ -73,6 +112,17 @@ public class DragNShoot : MonoBehaviour
                 force = new Vector2(Mathf.Clamp(startPoint.x - endPoint.x, minPower.x, maxPower.x), Mathf.Clamp(startPoint.y - endPoint.y, minPower.y, maxPower.y));
                 rb.AddForce(force * power, ForceMode2D.Impulse);
                 tl.EndLine();
+                if (canReShoot)
+                {
+                    Debug.Log("Desac le collider");
+                    //saveCollider.enabled = false;
+                    canReShoot = false;
+                    Time.timeScale = 1f;
+                    Time.fixedDeltaTime = timeScaleSlowMo * Time.timeScale;
+                    PostProcessingCamera.Instance.ChangeColor(false);
+                }
+                //else
+                //saveCollider.enabled = true;
             }
         }
         else
