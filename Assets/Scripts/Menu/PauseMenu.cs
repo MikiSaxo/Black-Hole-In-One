@@ -51,6 +51,7 @@ public class PauseMenu : MonoBehaviour
         nextLevel.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
+        ManageLevel.Instance.howManyShoot--;
     }
 
     IEnumerator TpBall()
@@ -75,6 +76,12 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         GameIsPaused = false;
         pauseMenuUI.SetActive(false);
+        ManageLevel.Instance.howManyShoot--;
+    }
+
+    public void RestartForEndOfLevel()
+    {
+        ManageLevel.Instance.cntEnd--;
     }
 
     public void GoToMainMenu()
