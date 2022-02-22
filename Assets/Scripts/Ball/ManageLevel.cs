@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class ManageLevel : MonoBehaviour
 {
-    public int howManyShoot;
-    public int[] howManyShootNeeded;
-    public GameObject[] Stars;
     public TrailRenderer tr;
     public GameObject[] SpawnPoint;
     public Collider2D[] EndPoint;
     public GameObject nextLevelMenu;
     public Rigidbody2D rb;
-    public float timeForSpawnUIAtEnd = .5f;
     public int cntEnd = 0;
     public int cntSpawn = 1;
     [SerializeField] private RipplePostProcessor camRipple;
@@ -33,28 +29,25 @@ public class ManageLevel : MonoBehaviour
     {
         if (collision == EndPoint[cntEnd])
         {
+            //StartCoroutine(Transi());
             Debug.Log("endpoint");
-            StartCoroutine(Transi());
             camRipple.RippleEffect();
-            rb.velocity = Vector2.zero;
-            if (howManyShoot <= howManyShootNeeded[cntEnd])
-            {
-                for (int i = 0; i < Stars.Length; i++)
-                {
-                    Stars[i].SetActive(true);
-                }
-            }
-            howManyShoot = 0;
+            cntEnd++;
+            tr.emitting = false;
+            nextLevelMenu.SetActive(true);
             //Time.timeScale = 0f;
+            rb.velocity = Vector2.zero;
         }
     }
 
-    IEnumerator Transi()
-    {
-        yield return new WaitForSeconds(timeForSpawnUIAtEnd);
-        cntEnd++;
-        tr.emitting = false;
-        nextLevelMenu.SetActive(true);
-
-    }
+    //IEnumerator Transi()
+    //{
+    //    Debug.Log("endpoint");
+    //    cntEnd++;
+    //    tr.emitting = false;
+    //    yield return new WaitForSeconds(.01f);
+    //    nextLevelMenu.SetActive(true);
+    //    Time.timeScale = 0f;
+    //    rb.velocity = Vector2.zero;
+    //}
 }

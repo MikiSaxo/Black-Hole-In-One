@@ -23,7 +23,7 @@ public class PostProcessingCamera : MonoBehaviour
     }
     public void ChangeColor(bool value)
     {
-        //Debug.Log("Passe en gris");
+        Debug.Log("Passe en gris");
         colorGrading.active = value;
     }
 }
