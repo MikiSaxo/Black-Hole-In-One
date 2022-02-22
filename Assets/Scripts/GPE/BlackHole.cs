@@ -13,7 +13,7 @@ public class BlackHole : MonoBehaviour
     private void Update()
     {
         float dist = Vector2.Distance(ball.transform.position, transform.position);
-
+        
 
         if (dist <= maxGravityDist && !PauseMenu.Instance.GameIsPaused)
         {

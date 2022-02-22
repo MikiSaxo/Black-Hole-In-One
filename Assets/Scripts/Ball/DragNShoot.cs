@@ -5,6 +5,8 @@ using UnityEngine;
 public class DragNShoot : MonoBehaviour
 {
     public float power = 10f;
+    public float ValueToReShoot = .01f;
+
     public Rigidbody2D rb;
     public SpriteRenderer sprBall;
 
@@ -25,11 +27,31 @@ public class DragNShoot : MonoBehaviour
         tl = GetComponent<TrajectoryLine>();
     }
 
+    private int collisionCount = 0;
+
+    public bool IsNotColliding
+    {
+        get { return collisionCount == 0; }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        collisionCount = 1;
+
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        collisionCount = 0;
+    }
+
     private void Update()
     {
-        if (rb.velocity.magnitude == 0)
+        Debug.Log(rb.velocity.magnitude);
+        if (rb.velocity.magnitude <= ValueToReShoot && collisionCount == 1)
         {
             sprBall.color = Color.green;
+            rb.velocity = Vector2.zero;
             if (Input.GetMouseButtonDown(0))
             {
                 startPoint = cam.ScreenToWorldPoint(Input.mousePosition);
