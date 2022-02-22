@@ -43,6 +43,10 @@ public class PauseMenu : MonoBehaviour
     public void NextLevel()
     {
         StartCoroutine(TpBall());
+        for (int i = 0; i < ManageLevel.Instance.Stars.Length; i++)
+        {
+            ManageLevel.Instance.Stars[i].SetActive(false);
+        }
         pauseMenuUI.SetActive(false);
         nextLevel.SetActive(false);
         Time.timeScale = 1f;
@@ -66,9 +70,11 @@ public class PauseMenu : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        ball.transform.position = ManageLevel.Instance.SpawnPoint[ManageLevel.Instance.cntSpawn-1].transform.position;
         Time.timeScale = 1f;
         GameIsPaused = false;
+        pauseMenuUI.SetActive(false);
     }
 
     public void GoToMainMenu()

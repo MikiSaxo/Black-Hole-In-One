@@ -41,9 +41,20 @@ public class ManageLevel : MonoBehaviour
             {
                 for (int i = 0; i < Stars.Length; i++)
                 {
+                    Debug.Log("Active 3 étoiles");
                     Stars[i].SetActive(true);
                 }
             }
+            else if (howManyShoot <= howManyShootNeeded[cntEnd + 2])
+            {
+                for (int i = 0; i < Stars.Length - 1; i++)
+                {
+                    Debug.Log("Active 2 étoiles");
+                    Stars[i].SetActive(true);
+                }
+            }
+            else
+                Stars[0].SetActive(true);
             howManyShoot = 0;
             //Time.timeScale = 0f;
         }
