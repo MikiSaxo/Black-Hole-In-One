@@ -4563,27 +4563,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5445005115762033674, guid: de254b441b2a10a4c9cb6b60161117b4, type: 3}
   m_PrefabInstance: {fileID: 1428360483}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1428360485 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5445005115762033677, guid: de254b441b2a10a4c9cb6b60161117b4, type: 3}
-  m_PrefabInstance: {fileID: 1428360483}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1428360486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1428360485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9d80e3d6e1229147a6e8f9a67f4dcc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ball: {fileID: 1133163496}
-  maxGravity: 200
-  maxGravityDist: 14.77
-  rbBall: {fileID: 1133163493}
 --- !u!1 &1459936564
 GameObject:
   m_ObjectHideFlags: 0
@@ -4619,6 +4598,7 @@ MonoBehaviour:
   GameIsPaused: 0
   pauseMenuUI: {fileID: 0}
   nextLevel: {fileID: 0}
+  ball: {fileID: 0}
 --- !u!114 &1459936566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5855,22 +5835,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5445005115762033674, guid: de254b441b2a10a4c9cb6b60161117b4, type: 3}
   m_PrefabInstance: {fileID: 2018012985}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2018012988
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2018012986}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9d80e3d6e1229147a6e8f9a67f4dcc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ball: {fileID: 1133163496}
-  maxGravity: 200
-  maxGravityDist: 12.23
-  rbBall: {fileID: 1133163493}
 --- !u!1 &2023637315
 GameObject:
   m_ObjectHideFlags: 0
@@ -6046,27 +6010,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5445005115762033674, guid: de254b441b2a10a4c9cb6b60161117b4, type: 3}
   m_PrefabInstance: {fileID: 2093034366}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2093034368 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5445005115762033677, guid: de254b441b2a10a4c9cb6b60161117b4, type: 3}
-  m_PrefabInstance: {fileID: 2093034366}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2093034369
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2093034368}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9d80e3d6e1229147a6e8f9a67f4dcc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ball: {fileID: 1133163496}
-  maxGravity: 200
-  maxGravityDist: 11.77
-  rbBall: {fileID: 1133163493}
 --- !u!1 &2101647178
 GameObject:
   m_ObjectHideFlags: 0
