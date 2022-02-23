@@ -21,10 +21,10 @@ public class DragNShoot : MonoBehaviour
     TrajectoryLine tl;
 
     Camera cam;
-    Vector2 force;
-    Vector3 startPoint;
-    Vector3 endPoint;
-
+    public Vector2 force;
+    public Vector3 startPoint;
+    public Vector3 endPoint;
+    public LineRenderer lr;
 
     public static DragNShoot Instance;
     private void Awake()
@@ -108,6 +108,21 @@ public class DragNShoot : MonoBehaviour
                 Vector3 currentPoint = cam.ScreenToWorldPoint(Input.mousePosition);
                 currentPoint.z = 15;
                 tl.RenderLine(startPoint, currentPoint);
+
+                
+                force = new Vector2(Mathf.Clamp(startPoint.x - currentPoint.x, minPower.x, maxPower.x), Mathf.Clamp(startPoint.y - currentPoint.y, minPower.y, maxPower.y));
+                Vector2 _velocity = force * power / 20;
+
+                Vector2[] trajectory = PreviewPhysics(rb, (Vector2)transform.position, _velocity, 100);
+
+                lr.positionCount = trajectory.Length;
+
+                Vector3[] positions = new Vector3[trajectory.Length];
+                for (int i = 0; i < trajectory.Length; i++)
+                {
+                    positions[i] = trajectory[i];
+                }
+                lr.SetPositions(positions);
             }
 
             if (Input.GetMouseButtonUp(0))
@@ -118,21 +133,18 @@ public class DragNShoot : MonoBehaviour
                 force = new Vector2(Mathf.Clamp(startPoint.x - endPoint.x, minPower.x, maxPower.x), Mathf.Clamp(startPoint.y - endPoint.y, minPower.y, maxPower.y));
                 rb.AddForce(force * power, ForceMode2D.Impulse);
                 tl.EndLine();
+                lr.positionCount = 0;
                 if (!PauseMenu.Instance.GameIsPaused)
                 {
                     ManageLevel.Instance.howManyShoot++;
                 }
                 if (canReShoot)
                 {
-                    Debug.Log("Desac le collider");
-                    //saveCollider.enabled = false;
                     canReShoot = false;
                     Time.timeScale = 1f;
                     Time.fixedDeltaTime = timeScaleSlowMo * Time.timeScale;
                     PostProcessingCamera.Instance.ChangeColor(false);
                 }
-                //else
-                //saveCollider.enabled = true;
             }
         }
         else
@@ -140,4 +152,25 @@ public class DragNShoot : MonoBehaviour
             sprBall.color = Color.white;
         }
     }
+
+    public static Vector2[] PreviewPhysics(Rigidbody2D rb, Vector2 pos, Vector2 velocity, int steps)
+    {
+        Vector2[] results = new Vector2[steps];
+
+        float timestep = Time.fixedDeltaTime;
+        Vector2 gravityAccel = Physics2D.gravity * rb.gravityScale * timestep * timestep;
+        float drag = 1f - timestep * rb.drag;
+        Vector2 moveStep = velocity * timestep;
+
+        for (int i = 0; i < steps; i++)
+        {
+            moveStep += gravityAccel;
+            moveStep *= drag;
+            pos += moveStep;
+            results[i] = pos;
+        }
+
+        return results;
+    }
+
 }
