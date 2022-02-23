@@ -5719,6 +5719,14 @@ PrefabInstance:
       propertyPath: howManyShootNeeded.Array.data[2]
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1519823854, guid: ffb63edec8b4417489150653657f5040, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8625535493795310728, guid: ffb63edec8b4417489150653657f5040, type: 3}
+      propertyPath: power
+      value: 844
+      objectReference: {fileID: 0}
     - target: {fileID: 8625535493795310728, guid: ffb63edec8b4417489150653657f5040, type: 3}
       propertyPath: reShootCollider.Array.data[0]
       value: 
@@ -5777,11 +5785,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8625535493795310743, guid: ffb63edec8b4417489150653657f5040, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 142.9
+      value: 145.52
       objectReference: {fileID: 0}
     - target: {fileID: 8625535493795310743, guid: ffb63edec8b4417489150653657f5040, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10.7
+      value: -10.07
       objectReference: {fileID: 0}
     - target: {fileID: 8625535493795310743, guid: ffb63edec8b4417489150653657f5040, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5814,6 +5822,14 @@ PrefabInstance:
     - target: {fileID: 8625535493795310743, guid: ffb63edec8b4417489150653657f5040, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8662874971412059655, guid: ffb63edec8b4417489150653657f5040, type: 3}
+      propertyPath: power
+      value: 203
+      objectReference: {fileID: 0}
+    - target: {fileID: 8662874971412059655, guid: ffb63edec8b4417489150653657f5040, type: 3}
+      propertyPath: numberOfPoints
+      value: 125
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffb63edec8b4417489150653657f5040, type: 3}

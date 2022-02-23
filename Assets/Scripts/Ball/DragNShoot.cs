@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DragNShoot : MonoBehaviour
 {
-    public float power = 10f;
+    public int power;
     public float ValueToReShoot = .01f;
 
     public Rigidbody2D rb;
@@ -25,6 +25,12 @@ public class DragNShoot : MonoBehaviour
     Vector3 startPoint;
     Vector3 endPoint;
 
+
+    public static DragNShoot Instance;
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void Start()
     {

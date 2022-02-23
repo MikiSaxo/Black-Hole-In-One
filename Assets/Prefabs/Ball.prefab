@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 8625535493795310729}
   - component: {fileID: 1519823854}
   - component: {fileID: 1519823853}
+  - component: {fileID: 8662874971412059655}
   m_Layer: 6
   m_Name: Ball
   m_TagString: Untagged
@@ -407,6 +408,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d4f9117233f80a4095d6ef040956e26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  howManyShoot: 0
+  howManyShootNeeded: 
+  Stars: []
   tr: {fileID: 1519823854}
   SpawnPoint:
   - {fileID: 0}
@@ -419,5 +423,20 @@ MonoBehaviour:
   - {fileID: 0}
   nextLevelMenu: {fileID: 0}
   rb: {fileID: 8625535493795310740}
+  timeForSpawnUIAtEnd: 0.5
   cntEnd: 0
   cntSpawn: 1
+  camRipple: {fileID: 0}
+--- !u!114 &8662874971412059655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8625535493795310739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0da9237158bc84e42937d3327976ffdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 8625535493795310740}
