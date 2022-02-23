@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1564649750768344619}
   - component: {fileID: 1564649750768344617}
   - component: {fileID: 1564649750768344618}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Down Gravity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,9 +25,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1564649750768344612}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 13.09, y: 3.09, z: 24.495958}
-  m_LocalScale: {x: 16.8908, y: 9.7835, z: 1}
+  m_LocalScale: {x: 13.336976, y: 5.3417907, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 8307521629017494407, guid: 2ad15eb79fe1c8e4abd4b9528c64823c, type: 3}
   m_Color: {r: 0, g: 1, b: 1, a: 0.21960784}
   m_FlipX: 0

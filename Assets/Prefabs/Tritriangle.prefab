@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7114640315174604133}
   - component: {fileID: 7114640315174604155}
   - component: {fileID: 7114640315174604154}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tritriangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7114640315174604134}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -19.159267, y: -18.48999, z: 15.155958}
   m_LocalScale: {x: 2.4982, y: 2.4982, z: 2.4982}
   m_Children: []

@@ -107,7 +107,7 @@ public class DragNShoot : MonoBehaviour
             {
                 Vector3 currentPoint = cam.ScreenToWorldPoint(Input.mousePosition);
                 currentPoint.z = 15;
-                tl.RenderLine(startPoint, currentPoint);
+                //tl.RenderLine(startPoint, currentPoint);
 
                 
                 force = new Vector2(Mathf.Clamp(startPoint.x - currentPoint.x, minPower.x, maxPower.x), Mathf.Clamp(startPoint.y - currentPoint.y, minPower.y, maxPower.y));
@@ -132,7 +132,7 @@ public class DragNShoot : MonoBehaviour
 
                 force = new Vector2(Mathf.Clamp(startPoint.x - endPoint.x, minPower.x, maxPower.x), Mathf.Clamp(startPoint.y - endPoint.y, minPower.y, maxPower.y));
                 rb.AddForce(force * power, ForceMode2D.Impulse);
-                tl.EndLine();
+                //tl.EndLine();
                 lr.positionCount = 0;
                 if (!PauseMenu.Instance.GameIsPaused)
                 {

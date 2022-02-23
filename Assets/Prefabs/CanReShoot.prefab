@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8978499450532156394}
   - component: {fileID: 8978499450532156392}
   - component: {fileID: 8978499450532156393}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CanReShoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,9 +25,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8978499450532156395}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 23.617443, y: -0.84923744, z: 37.355167}
-  m_LocalScale: {x: 11.338795, y: 5.119705, z: 1}
+  m_LocalScale: {x: 17.6477, y: 13.722346, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 8307521629017494407, guid: 2ad15eb79fe1c8e4abd4b9528c64823c, type: 3}
   m_Color: {r: 1, g: 0.9614235, b: 0, a: 0.21960784}
   m_FlipX: 0
