@@ -72,7 +72,8 @@ public class LevelInfoUI : MonoBehaviour
 
     public void OnPointerClick()
     {
-        PauseMenu.Instance.ChooseALevel();
+        if (_info.isUnlocked)
+            PauseMenu.Instance.ChooseALevel();
         //OnPointerExit();
     }
 }

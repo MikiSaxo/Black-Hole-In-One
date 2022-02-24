@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -60,18 +61,26 @@ public class PauseMenu : MonoBehaviour
     {
         ball.transform.position = ManageLevel.Instance.SpawnPoint[ManageLevel.Instance.cntSpawn-1].transform.position;
         yield return new WaitForSeconds(.01f);
+        StartCoroutine(StopBall());
         ManageLevel.Instance.tr.emitting = true;
+    }
+
+    IEnumerator StopBall()
+    {
+        yield return new WaitForSeconds(.01f);
+        rbBall.velocity = Vector2.zero;
     }
 
     public void ChooseALevel()
     {
         ball.transform.position = ManageLevel.Instance.SpawnPoint[ManageLevel.Instance.cntSpawn-1].transform.position;
-        rbBall.velocity = Vector2.zero;
         MakeSldLevelsDisappear();
+        StartCoroutine(StopBall());
         //pauseMenuUI.SetActive(false);
         //nextLevel.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
+        ManageLevel.Instance.howManyShoot--;
     }
 
     public void Pause()
@@ -85,6 +94,7 @@ public class PauseMenu : MonoBehaviour
     {
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         ball.transform.position = ManageLevel.Instance.SpawnPoint[ManageLevel.Instance.cntSpawn-1].transform.position;
+        StartCoroutine(StopBall());
         Time.timeScale = 1f;
         GameIsPaused = false;
         pauseMenuUI.SetActive(false);
@@ -103,13 +113,19 @@ public class PauseMenu : MonoBehaviour
 
     public void MakeSldLevelsDisappear()
     {
-        selectedlevels.SetActive(false);
+        //selectedlevels.SetActive(false);
+        selectedlevels.transform.DOMoveY(850, 2.7f);
     }
 
     public void MakeSldLevelsAppear()
     {
-        Time.timeScale = 0;
+        selectedlevels.transform.DOMoveY(260, 1.2f).OnComplete(MakeTimeScaleOff);
         ManageLevel.Instance.howManyShoot = 0;
-        selectedlevels.SetActive(true);
+        //selectedlevels.SetActive(true);
+    }
+
+    void MakeTimeScaleOff()
+    {
+        Time.timeScale = 0;
     }
 }

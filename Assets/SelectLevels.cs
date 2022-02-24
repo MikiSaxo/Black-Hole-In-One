@@ -23,8 +23,9 @@ public class SelectLevels : MonoBehaviour
             LevelInfos infos = new LevelInfos();
             levelsMenu.Add(infos);
         }
-            //Content.transform.localScale = new Vector3(1 + ((ManageLevel.Instance.SpawnPoint.Length - 5) * .3f), 1, 1);
-            for (int i = 0; i <= ManageLevel.Instance.SpawnPoint.Length + 1; i++)
+        
+        //Content.transform.localScale = new Vector3(1 + ((ManageLevel.Instance.SpawnPoint.Length - 5) * .3f), 1, 1);
+        for (int i = 0; i < ManageLevel.Instance.SpawnPoint.Length; i++)
         {
             GameObject go = Instantiate(levelPrefab, Content.transform, Content.transform);
             go.transform.localScale = new Vector3(1, 1, 1);
