@@ -2482,6 +2482,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d4f9117233f80a4095d6ef040956e26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  howManyShoot: 0
+  howManyShootNeeded: 
+  Stars: []
   tr: {fileID: 1130912717}
   SpawnPoint:
   - {fileID: 684677882}
@@ -2494,8 +2497,10 @@ MonoBehaviour:
   - {fileID: 613890186}
   nextLevelMenu: {fileID: 442875109}
   rb: {fileID: 1130912713}
+  timeForSpawnUIAtEnd: 0.5
   cntEnd: 0
   cntSpawn: 1
+  camRipple: {fileID: 0}
 --- !u!96 &1130912717
 TrailRenderer:
   serializedVersion: 2
@@ -3827,6 +3832,7 @@ MonoBehaviour:
   GameIsPaused: 0
   pauseMenuUI: {fileID: 0}
   nextLevel: {fileID: 0}
+  ball: {fileID: 0}
 --- !u!114 &1863018307
 MonoBehaviour:
   m_ObjectHideFlags: 0
