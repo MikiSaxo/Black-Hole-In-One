@@ -8,6 +8,10 @@ public class LevelInfoUI : MonoBehaviour
     public GameObject[] yellowStars;
     public GameObject isUnlockedd;
     LevelInfos _info;
+    private void Start()
+    {
+        Refresh();
+    }
 
     public void Initialize(LevelInfos info)
     {
@@ -30,8 +34,9 @@ public class LevelInfoUI : MonoBehaviour
         }
     }
 
-    private void Start()
+    public void OnPointerEnter()
     {
-        Refresh();
+        if (_info.isUnlocked)
+            Debug.Log("Hello bro");
     }
 }
