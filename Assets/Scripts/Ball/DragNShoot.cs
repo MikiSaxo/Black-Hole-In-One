@@ -97,7 +97,7 @@ public class DragNShoot : MonoBehaviour
             {
                 rb.velocity = Vector2.zero;
             }
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && !PauseMenu.Instance.GameIsPaused)
             {
                 startPoint = cam.ScreenToWorldPoint(Input.mousePosition);
                 startPoint.z = 15;

@@ -23,7 +23,6 @@ public class SelectLevels : MonoBehaviour
             LevelInfos infos = new LevelInfos();
             levelsMenu.Add(infos);
         }
-
             //Content.transform.localScale = new Vector3(1 + ((ManageLevel.Instance.SpawnPoint.Length - 5) * .3f), 1, 1);
             for (int i = 0; i <= ManageLevel.Instance.SpawnPoint.Length + 1; i++)
         {

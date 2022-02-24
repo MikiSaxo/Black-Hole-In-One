@@ -58,9 +58,8 @@ public class PauseMenu : MonoBehaviour
 
     IEnumerator TpBall()
     {
-        ball.transform.position = ManageLevel.Instance.SpawnPoint[ManageLevel.Instance.cntSpawn].transform.position;
+        ball.transform.position = ManageLevel.Instance.SpawnPoint[ManageLevel.Instance.cntSpawn-1].transform.position;
         yield return new WaitForSeconds(.01f);
-        
         ManageLevel.Instance.tr.emitting = true;
     }
 

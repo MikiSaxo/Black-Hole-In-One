@@ -4290,7 +4290,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8856331969235501327, guid: c6b553c62a3f3bf4694eb05645c848d4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 210.1
+      value: 187.36
       objectReference: {fileID: 0}
     - target: {fileID: 8856331969235501327, guid: c6b553c62a3f3bf4694eb05645c848d4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6338,7 +6338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91931befd92d89e41bad3c54902889a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameIsPaused: 0
+  GameIsPaused: 1
   pauseMenuUI: {fileID: 275889204}
   nextLevel: {fileID: 151818511}
   ball: {fileID: 1519823847}
