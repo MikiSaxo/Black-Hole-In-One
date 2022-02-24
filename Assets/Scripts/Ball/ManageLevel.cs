@@ -6,8 +6,9 @@ public class ManageLevel : MonoBehaviour
 {
     public int howManyShoot;
     public int[] howManyShootNeeded;
-    public GameObject[] Stars;
+    public int howManyStars;
     public TrailRenderer tr;
+    public GameObject[] Stars;
     public GameObject[] SpawnPoint;
     public Collider2D[] EndPoint;
     public GameObject nextLevelMenu;
@@ -39,24 +40,33 @@ public class ManageLevel : MonoBehaviour
             rb.velocity = Vector2.zero;
             if (howManyShoot <= howManyShootNeeded[cntEnd])
             {
+                howManyStars = 3;
+                Debug.Log("Active 3 étoiles");
                 for (int i = 0; i < Stars.Length; i++)
                 {
-                    Debug.Log("Active 3 étoiles");
                     Stars[i].SetActive(true);
                 }
             }
             //else if (howManyShoot >= howManyShootNeeded[cntEnd + 2] && howManyShoot > howManyShootNeeded[cntEnd])
             else if (howManyShoot > howManyShootNeeded[cntEnd] && howManyShoot <= howManyShootNeeded[cntEnd] + 2)
             {
+                howManyStars = 2;
+                Debug.Log("Active 2 étoiles");
                 for (int i = 0; i < Stars.Length - 1; i++)
                 {
-                    Debug.Log("Active 2 étoiles");
                     Stars[i].SetActive(true);
                 }
             }
             else
+            {
                 Stars[0].SetActive(true);
+                howManyStars = 1;
+            }
+
+            SelectLevels.Instance.UpdateLevelInfos(cntEnd, howManyStars);
             howManyShoot = 0;
+            cntSpawn++;
+            PauseMenu.Instance.GameIsPaused = true;
             //Time.timeScale = 0f;
         }
     }

@@ -10,11 +10,14 @@ public class SelectLevels : MonoBehaviour
     //public GameObject[] GLevelMenu;
     public List<LevelInfoUI> GLevelMenu = new List<LevelInfoUI>();
 
+
+    public static SelectLevels Instance;
+    private void Awake()
+    {
+        Instance = this;
+    }
     private void Start()
     {
-
-        
-
         for (int i = 0; i <= ManageLevel.Instance.SpawnPoint.Length + 1; i++)
         {
             LevelInfos infos = new LevelInfos();
@@ -28,7 +31,7 @@ public class SelectLevels : MonoBehaviour
             go.transform.localScale = new Vector3(1, 1, 1);
             LevelInfoUI levelInfoUI = go.GetComponent<LevelInfoUI>();
             GLevelMenu.Add(levelInfoUI);
-
+            levelInfoUI.numbers.text = "" + (i + 1);
             levelInfoUI.Initialize(levelsMenu[i]);
 
 
@@ -43,8 +46,10 @@ public class SelectLevels : MonoBehaviour
     public void UpdateLevelInfos( int level , int startCount)
     {
         levelsMenu[level].yellowStars = startCount;
+        levelsMenu[level].isUnlocked = true;
         levelsMenu[level + 1].isUnlocked = true;
 
         GLevelMenu[level].Refresh();
+        GLevelMenu[level+1].Refresh();
     }
 }

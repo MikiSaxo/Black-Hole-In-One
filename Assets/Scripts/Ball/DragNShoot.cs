@@ -103,7 +103,7 @@ public class DragNShoot : MonoBehaviour
                 startPoint.z = 15;
             }
 
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButton(0) && !PauseMenu.Instance.GameIsPaused)
             {
                 Vector3 currentPoint = cam.ScreenToWorldPoint(Input.mousePosition);
                 currentPoint.z = 15;
@@ -125,7 +125,7 @@ public class DragNShoot : MonoBehaviour
                 lr.SetPositions(positions);
             }
 
-            if (Input.GetMouseButtonUp(0))
+            if (Input.GetMouseButtonUp(0) && !PauseMenu.Instance.GameIsPaused)
             {
                 endPoint = cam.ScreenToWorldPoint(Input.mousePosition);
                 endPoint.z = 15;
