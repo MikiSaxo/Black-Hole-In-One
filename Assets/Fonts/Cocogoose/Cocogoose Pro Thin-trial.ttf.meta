@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 5b0f1b2171f88d04490ce78d8ad99b83
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Cocogoose Pro
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: a589d5661f8e17f4190b216c8c544c79, type: 3}
+  - {fileID: 12800000, guid: 4a5f00c9a658fbc4eb6b900cd421b48d, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
