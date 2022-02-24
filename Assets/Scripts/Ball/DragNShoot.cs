@@ -89,12 +89,6 @@ public class DragNShoot : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            rb.velocity = Vector2.zero;
-            Debug.Log("space");
-        }
-
         //Debug.Log(rb.velocity.magnitude);
         if ((rb.velocity.magnitude <= ValueToReShoot && collisionCount == 1) || canReShoot)
         {
