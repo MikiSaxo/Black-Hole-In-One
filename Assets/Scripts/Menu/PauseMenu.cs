@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
 
@@ -12,6 +13,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject ball;
     public Rigidbody2D rbBall;
     public GameObject selectedlevels;
+    public Image fade;
 
     public static PauseMenu Instance;
 
@@ -114,12 +116,33 @@ public class PauseMenu : MonoBehaviour
     public void MakeSldLevelsDisappear()
     {
         //selectedlevels.SetActive(false);
-        selectedlevels.transform.DOMoveY(850, 2.7f);
+        StartCoroutine(LevelsDisappear());
+    }
+
+    IEnumerator LevelsDisappear()
+    {
+        MakeFadeON();
+        yield return new WaitForSeconds(.5f);
+        selectedlevels.transform.DOMoveY(680, .01f);
+        yield return new WaitForSeconds(.1f);
+        MakeFadeOff();
+
+    }
+
+    public void MakeFadeON()
+    {
+        fade.DOFade(1, .5f);
+    }
+    public void MakeFadeOff()
+    {
+        Debug.Log("go fade off");
+        fade.DOFade(0, .9f);
     }
 
     public void MakeSldLevelsAppear()
     {
-        selectedlevels.transform.DOMoveY(260, 1.2f).OnComplete(MakeTimeScaleOff);
+        Time.timeScale = 1;
+        selectedlevels.transform.DOMoveY(210, .01f).OnComplete(MakeTimeScaleOff);
         ManageLevel.Instance.howManyShoot = 0;
         //selectedlevels.SetActive(true);
     }
