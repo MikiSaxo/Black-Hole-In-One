@@ -252,6 +252,7 @@ GameObject:
   - component: {fileID: 8454564726548124766}
   - component: {fileID: 6674776056983311112}
   - component: {fileID: 5147480365890370185}
+  - component: {fileID: 4226457122434044226}
   m_Layer: 6
   m_Name: Planet
   m_TagString: Untagged
@@ -299,14 +300,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.524852, g: 0.35154858, b: 0.9433962, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2300283019187234062, guid: a5d130c36c6e62d439a20faf859e9986, type: 3}
+  m_Sprite: {fileID: 667856776226961401, guid: a6a0b199958ac0f4a85ecf2475357ba2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -316,6 +317,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4226457122434044226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2566191370752200351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
 --- !u!1 &3465458557223887170
 GameObject:
   m_ObjectHideFlags: 0
@@ -549,6 +563,7 @@ GameObject:
   - component: {fileID: 3640610604659142995}
   - component: {fileID: 4990576662249185479}
   - component: {fileID: 1096420836982859016}
+  - component: {fileID: 8053512064202700991}
   m_Layer: 6
   m_Name: LevelsMenu
   m_TagString: Untagged
@@ -640,12 +655,36 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 8053512064202700991}
+          m_TargetAssemblyTypeName: HoverButton, Assembly-CSharp
+          m_MethodName: OnPointerEnter
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - eventID: 1
     callback:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 4990576662249185479}
           m_TargetAssemblyTypeName: LevelInfoUI, Assembly-CSharp
+          m_MethodName: OnPointerExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 8053512064202700991}
+          m_TargetAssemblyTypeName: HoverButton, Assembly-CSharp
           m_MethodName: OnPointerExit
           m_Mode: 1
           m_Arguments:
@@ -672,6 +711,22 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &8053512064202700991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6375131269587944712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ed115e63ef18b4f989d6f7e4e020f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialColor: {r: 1, g: 1, b: 1, a: 1}
+  selectedColor: {r: 0.49803922, g: 0.5803922, b: 0.6901961, a: 1}
+  whiteContour: {fileID: 5147480365890370185}
+  text: {fileID: 0}
 --- !u!1001 &1540740392657186118
 PrefabInstance:
   m_ObjectHideFlags: 0
