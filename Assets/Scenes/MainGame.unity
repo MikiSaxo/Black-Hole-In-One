@@ -920,7 +920,7 @@ Transform:
   - {fileID: 1629345156}
   - {fileID: 8974020}
   m_Father: {fileID: 1440679123}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &99274201
 PrefabInstance:
@@ -10280,7 +10280,7 @@ Transform:
   - {fileID: 2097921230}
   - {fileID: 158800834}
   m_Father: {fileID: 1440679123}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &724230640
 GameObject:
@@ -20548,6 +20548,7 @@ Transform:
   - {fileID: 388779399}
   - {fileID: 932696370}
   - {fileID: 1714807963}
+  - {fileID: 1459458642}
   - {fileID: 92671169}
   - {fileID: 1523456942}
   - {fileID: 1749043773}
@@ -20695,6 +20696,36 @@ Transform:
   - {fileID: 1759803302}
   m_Father: {fileID: 0}
   m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1459458641
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1459458642}
+  m_Layer: 6
+  m_Name: BlackHole
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1459458642
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459458641}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1440679123}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1461800942
 PrefabInstance:
@@ -21090,7 +21121,7 @@ Transform:
   - {fileID: 1360283601}
   - {fileID: 1491614934}
   m_Father: {fileID: 1440679123}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1532989643
 GameObject:
@@ -23089,6 +23120,7 @@ MonoBehaviour:
   rbBall: {fileID: 641089484}
   selectedlevels: {fileID: 1353637420}
   fade: {fileID: 564668933}
+  hasChooseLevel: 0
 --- !u!1001 &1689364308
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23659,7 +23691,7 @@ Transform:
   - {fileID: 5433546609464569739}
   - {fileID: 201667168}
   m_Father: {fileID: 1440679123}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1749281238
 PrefabInstance:
@@ -29088,11 +29120,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1519823853, guid: ffb63edec8b4417489150653657f5040, type: 3}
       propertyPath: howManyShootNeeded.Array.data[0]
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1519823853, guid: ffb63edec8b4417489150653657f5040, type: 3}
       propertyPath: howManyShootNeeded.Array.data[1]
-      value: 5
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1519823853, guid: ffb63edec8b4417489150653657f5040, type: 3}
       propertyPath: howManyShootNeeded.Array.data[2]

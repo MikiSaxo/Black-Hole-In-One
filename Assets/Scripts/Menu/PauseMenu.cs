@@ -14,6 +14,12 @@ public class PauseMenu : MonoBehaviour
     public Rigidbody2D rbBall;
     public GameObject selectedlevels;
     public Image fade;
+    public int hasChooseLevel;
+
+    const float timeFadeON = .4f;
+    const float timeFadeOFF = .9f;
+    const int moveSelectLevel = 467;
+    const float avoidSameTic = .01f;
 
     public static PauseMenu Instance;
 
@@ -43,10 +49,18 @@ public class PauseMenu : MonoBehaviour
         nextLevel.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
+        //rbBall.velocity = Vector2.zero;
+    }
+    public void Pause()
+    {
+        pauseMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+        GameIsPaused = true;
     }
 
     public void NextLevel()
     {
+        hasChooseLevel++;
         StartCoroutine(TpBall());
         for (int i = 0; i < ManageLevel.Instance.Stars.Length; i++)
         {
@@ -58,24 +72,18 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = false;
         ManageLevel.Instance.howManyShoot--;
     }
-
     IEnumerator TpBall()
     {
         ball.transform.position = ManageLevel.Instance.SpawnPoint[ManageLevel.Instance.cntSpawn-1].transform.position;
-        yield return new WaitForSeconds(.01f);
+        yield return new WaitForSeconds(avoidSameTic);
         StartCoroutine(StopBall());
         ManageLevel.Instance.tr.emitting = true;
     }
 
-    IEnumerator StopBall()
+    public void ChooseALevel(int whichLevel)
     {
-        yield return new WaitForSeconds(.01f);
-        rbBall.velocity = Vector2.zero;
-    }
-
-    public void ChooseALevel()
-    {
-        ball.transform.position = ManageLevel.Instance.SpawnPoint[ManageLevel.Instance.cntSpawn-1].transform.position;
+        ball.transform.position = ManageLevel.Instance.SpawnPoint[whichLevel].transform.position;
+        hasChooseLevel = whichLevel;
         MakeSldLevelsDisappear();
         StartCoroutine(StopBall());
         //pauseMenuUI.SetActive(false);
@@ -84,29 +92,27 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = false;
         ManageLevel.Instance.howManyShoot--;
     }
-
-    public void Pause()
+    IEnumerator StopBall()
     {
-        pauseMenuUI.SetActive(true);
-        Time.timeScale = 0f;
-        GameIsPaused = true;
+        yield return new WaitForSeconds(avoidSameTic);
+        rbBall.velocity = Vector2.zero;
     }
 
     public void Restart()
     {
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        ball.transform.position = ManageLevel.Instance.SpawnPoint[ManageLevel.Instance.cntSpawn-1].transform.position;
+        ball.transform.position = ManageLevel.Instance.SpawnPoint[hasChooseLevel].transform.position;
         StartCoroutine(StopBall());
         Time.timeScale = 1f;
         GameIsPaused = false;
         pauseMenuUI.SetActive(false);
-        ManageLevel.Instance.howManyShoot--;
+        ManageLevel.Instance.howManyShoot = 0;
     }
 
-    public void RestartForEndOfLevel()
-    {
-        ManageLevel.Instance.cntEnd--;
-    }
+    //public void RestartForEndOfLevel()
+    //{
+    //    ManageLevel.Instance.cntEnd--;
+    //}
 
     public void GoToMainMenu()
     {
@@ -115,40 +121,38 @@ public class PauseMenu : MonoBehaviour
 
     public void MakeSldLevelsDisappear()
     {
-        //selectedlevels.SetActive(false);
         StartCoroutine(LevelsDisappear());
+    }
+    public void MakeSldLevelsAppear()
+    {
+        rbBall.velocity = Vector2.zero;
+        Time.timeScale = 1;
+        StartCoroutine(LevelsAppear());
+        ManageLevel.Instance.howManyShoot = 0;
     }
 
     IEnumerator LevelsDisappear()
     {
         MakeFadeON();
-        yield return new WaitForSeconds(.5f);
-        selectedlevels.transform.DOMoveY(680, .01f);
-        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(timeFadeON);
+        selectedlevels.transform.position += new Vector3(0, moveSelectLevel, 0);
         MakeFadeOff();
+    }
 
+    IEnumerator LevelsAppear()
+    {
+        MakeFadeON();
+        yield return new WaitForSeconds(timeFadeON);
+        selectedlevels.transform.position += new Vector3(0, -moveSelectLevel, 0);
+        MakeFadeOff();
     }
 
     public void MakeFadeON()
     {
-        fade.DOFade(1, .5f);
+        fade.DOFade(1, timeFadeON);
     }
     public void MakeFadeOff()
     {
-        Debug.Log("go fade off");
-        fade.DOFade(0, .9f);
-    }
-
-    public void MakeSldLevelsAppear()
-    {
-        Time.timeScale = 1;
-        selectedlevels.transform.DOMoveY(210, .01f).OnComplete(MakeTimeScaleOff);
-        ManageLevel.Instance.howManyShoot = 0;
-        //selectedlevels.SetActive(true);
-    }
-
-    void MakeTimeScaleOff()
-    {
-        Time.timeScale = 0;
+        fade.DOFade(0, timeFadeOFF);
     }
 }

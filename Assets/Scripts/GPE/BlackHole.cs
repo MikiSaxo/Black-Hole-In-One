@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class BlackHole : MonoBehaviour
 {
-    public GameObject ball;
-
     public float maxGravity;
     public float maxGravityDist;
+    public GameObject ball;
     public Rigidbody2D rbBall;
 
     private void Update()
