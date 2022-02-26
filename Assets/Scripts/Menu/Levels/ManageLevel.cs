@@ -47,7 +47,6 @@ public class ManageLevel : MonoBehaviour
                     Stars[i].SetActive(true);
                 }
             }
-            //else if (howManyShoot >= howManyShootNeeded[cntEnd + 2] && howManyShoot > howManyShootNeeded[cntEnd])
             else if (howManyShoot > howManyShootNeeded[PauseMenu.Instance.hasChooseLevel] && howManyShoot <= howManyShootNeeded[PauseMenu.Instance.hasChooseLevel] + 2)
             {
                 howManyStars = 2;

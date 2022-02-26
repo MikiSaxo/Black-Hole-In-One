@@ -28,6 +28,11 @@ public class PauseMenu : MonoBehaviour
         Instance = this;
     }
 
+    private void Start()
+    {
+        MakeFadeOff();
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -116,6 +121,13 @@ public class PauseMenu : MonoBehaviour
 
     public void GoToMainMenu()
     {
+        StartCoroutine(GoToMainM());
+        MakeFadeON();
+    }
+
+    IEnumerator GoToMainM()
+    {
+        yield return new WaitForSeconds(timeFadeON);
         SceneManager.LoadScene(0);
     }
 
