@@ -610,6 +610,7 @@ MonoBehaviour:
   initialColor: {r: 1, g: 1, b: 1, a: 1}
   selectedColor: {r: 0.9951428, g: 1, b: 0, a: 1}
   numbers: {fileID: 6001333989873738388}
+  whichLevel: 0
 --- !u!114 &1096420836982859016
 MonoBehaviour:
   m_ObjectHideFlags: 0

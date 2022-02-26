@@ -52,7 +52,6 @@ public class LevelInfoUI : MonoBehaviour
     {
         if (_info.isUnlocked)
         {
-            Debug.Log("Pointer Enter");
             whiteCircle.DOKill();
             whiteCircle.DOColor(selectedColor, .2f);
             numbers.DOKill();
