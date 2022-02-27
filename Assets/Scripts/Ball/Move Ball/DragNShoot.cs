@@ -11,6 +11,7 @@ public class DragNShoot : MonoBehaviour
     public SpriteRenderer sprBall;
     public Collider2D[] reShootCollider;
     bool canReShoot;
+    public SpriteRenderer canReShootFeedback;
     public Collider2D saveCollider;
     public float timeScaleInZone = .5f;
     const float timeScaleSlowMo = .02f;
@@ -92,7 +93,8 @@ public class DragNShoot : MonoBehaviour
         //Debug.Log(rb.velocity.magnitude);
         if ((rb.velocity.magnitude <= ValueToReShoot && collisionCount == 1) || canReShoot)
         {
-            sprBall.color = Color.green;
+            //sprBall.color = Color.green;
+            canReShootFeedback.enabled = true;
             if (!canReShoot)
             {
                 rb.velocity = Vector2.zero;
@@ -149,7 +151,8 @@ public class DragNShoot : MonoBehaviour
         }
         else
         {
-            sprBall.color = Color.white;
+            //sprBall.color = Color.white;
+            canReShootFeedback.enabled = false;
         }
     }
 
