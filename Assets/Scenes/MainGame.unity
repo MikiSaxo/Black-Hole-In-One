@@ -32076,6 +32076,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4643349165032463324, guid: ecb059b98f946044385bedecf208a4b6, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643349165032463324, guid: ecb059b98f946044385bedecf208a4b6, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].x
+      value: -0.8626747
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643349165032463324, guid: ecb059b98f946044385bedecf208a4b6, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].y
+      value: -0.32406077
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643349165032463324, guid: ecb059b98f946044385bedecf208a4b6, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].x
+      value: 0.1577034
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643349165032463324, guid: ecb059b98f946044385bedecf208a4b6, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].y
+      value: -0.26957133
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643349165032463324, guid: ecb059b98f946044385bedecf208a4b6, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].x
+      value: 0.13631248
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643349165032463324, guid: ecb059b98f946044385bedecf208a4b6, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].y
+      value: -1.0119585
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643349165032463324, guid: ecb059b98f946044385bedecf208a4b6, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[4].x
+      value: -0.9447837
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643349165032463324, guid: ecb059b98f946044385bedecf208a4b6, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[4].y
+      value: -1.0072765
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643349165032463324, guid: ecb059b98f946044385bedecf208a4b6, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[5].x
+      value: -0.9855225
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643349165032463324, guid: ecb059b98f946044385bedecf208a4b6, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[5].y
+      value: -1.0071001
+      objectReference: {fileID: 0}
     - target: {fileID: 4643349165032463325, guid: ecb059b98f946044385bedecf208a4b6, type: 3}
       propertyPath: m_Name
       value: ZeroGravShape
@@ -32083,6 +32127,30 @@ PrefabInstance:
     - target: {fileID: 4643349165032463326, guid: ecb059b98f946044385bedecf208a4b6, type: 3}
       propertyPath: m_DynamicOccludee
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643349165032463326, guid: ecb059b98f946044385bedecf208a4b6, type: 3}
+      propertyPath: m_LocalAABB.m_Center.x
+      value: -0.4211483
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643349165032463326, guid: ecb059b98f946044385bedecf208a4b6, type: 3}
+      propertyPath: m_LocalAABB.m_Center.y
+      value: -0.6407649
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643349165032463326, guid: ecb059b98f946044385bedecf208a4b6, type: 3}
+      propertyPath: m_LocalAABB.m_Extent.x
+      value: 0.5788517
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643349165032463326, guid: ecb059b98f946044385bedecf208a4b6, type: 3}
+      propertyPath: m_LocalAABB.m_Extent.y
+      value: 0.3711936
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643349165032463327, guid: ecb059b98f946044385bedecf208a4b6, type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[1].position.x
+      value: -0.8626747
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643349165032463327, guid: ecb059b98f946044385bedecf208a4b6, type: 3}
+      propertyPath: m_Spline.m_ControlPoints.Array.data[1].position.y
+      value: -0.32406077
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecb059b98f946044385bedecf208a4b6, type: 3}
