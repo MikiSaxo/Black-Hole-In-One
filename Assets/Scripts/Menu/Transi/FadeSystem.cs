@@ -8,6 +8,7 @@ public class FadeSystem : MonoBehaviour
 {
     public Image fade;
     public GameObject title;
+    bool isTitleOff = true;
     public GameObject main;
     const float timeFadeON = .4f;
     const float timeFadeOFF = .9f;
@@ -25,9 +26,10 @@ public class FadeSystem : MonoBehaviour
 
     private void Update()
     {
-        if (Input.anyKey)
+        if (Input.anyKey && isTitleOff)
         {
             MakeTitleOff();
+            isTitleOff = false;
         }
     }
 
