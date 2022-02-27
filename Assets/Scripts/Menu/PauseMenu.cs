@@ -18,7 +18,7 @@ public class PauseMenu : MonoBehaviour
 
     const float timeFadeON = .4f;
     const float timeFadeOFF = .9f;
-    const int moveSelectLevel = 467;
+    const int moveSelectLevel = 525;
     const float avoidSameTic = .01f;
 
     public static PauseMenu Instance;

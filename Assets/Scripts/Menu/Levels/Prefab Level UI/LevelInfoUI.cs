@@ -36,7 +36,6 @@ public class LevelInfoUI : MonoBehaviour
     {
         if (_info.isUnlocked)
         {
-            Debug.Log("Cadena unlock");
             isUnlockedd.SetActive(false);
         }
 
