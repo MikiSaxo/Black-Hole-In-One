@@ -23641,11 +23641,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5120352530733691337, guid: b05b1ad0cbb0b624d8ab100829ed5175, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.5307326
+      value: -20.19
       objectReference: {fileID: 0}
     - target: {fileID: 5120352530733691337, guid: b05b1ad0cbb0b624d8ab100829ed5175, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.4900107
+      value: 25.46
       objectReference: {fileID: 0}
     - target: {fileID: 5120352530733691337, guid: b05b1ad0cbb0b624d8ab100829ed5175, type: 3}
       propertyPath: m_LocalPosition.z
@@ -32045,11 +32045,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4297296110420430565, guid: 35ec5e1bfee147a4dbed3c810c14d880, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 34.28
+      value: -8.02
       objectReference: {fileID: 0}
     - target: {fileID: 4297296110420430565, guid: 35ec5e1bfee147a4dbed3c810c14d880, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -20.22999
+      value: -20.22
       objectReference: {fileID: 0}
     - target: {fileID: 4297296110420430565, guid: 35ec5e1bfee147a4dbed3c810c14d880, type: 3}
       propertyPath: m_LocalPosition.z
@@ -32087,22 +32087,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bumper
       objectReference: {fileID: 0}
-    - target: {fileID: 4297296110420430585, guid: 35ec5e1bfee147a4dbed3c810c14d880, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4297296110420430586, guid: 35ec5e1bfee147a4dbed3c810c14d880, type: 3}
-      propertyPath: power
-      value: 200
-      objectReference: {fileID: 0}
     - target: {fileID: 4297296110420430586, guid: 35ec5e1bfee147a4dbed3c810c14d880, type: 3}
       propertyPath: rbBall
       value: 
       objectReference: {fileID: 641089484}
-    - target: {fileID: 4297296110420430586, guid: 35ec5e1bfee147a4dbed3c810c14d880, type: 3}
-      propertyPath: timeToLauchBumper
-      value: 0.1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35ec5e1bfee147a4dbed3c810c14d880, type: 3}
 --- !u!1001 &4688575425499577429
