@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 5445005115762033677}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 86.4, y: -2, z: 15.735958}
-  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -73,8 +73,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7505667077633894351, guid: 2ad15eb79fe1c8e4abd4b9528c64823c, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 107487a29fc09754db2a74df6b9dcefc, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -99,7 +99,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.00000047683716, y: -0.000000059604645}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 5.1246824
 --- !u!114 &1629345157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9d80e3d6e1229147a6e8f9a67f4dcc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ball: {fileID: 0}
   maxGravity: 800
   maxGravityDist: 14.77
+  ball: {fileID: 0}
   rbBall: {fileID: 0}
