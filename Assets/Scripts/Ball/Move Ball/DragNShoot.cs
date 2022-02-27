@@ -37,6 +37,7 @@ public class DragNShoot : MonoBehaviour
     {
         cam = Camera.main;
         tl = GetComponent<TrajectoryLine>();
+        //AudioManager.Instance.PlaySound("MusicGame");
     }
 
     private int collisionCount = 0;
@@ -129,6 +130,7 @@ public class DragNShoot : MonoBehaviour
 
             if (Input.GetMouseButtonUp(0) && !PauseMenu.Instance.GameIsPaused)
             {
+                ChooseRandomSoundForShoot();
                 endPoint = cam.ScreenToWorldPoint(Input.mousePosition);
                 endPoint.z = 15;
                 //CameraShake.Instance.CamShake();
@@ -154,6 +156,13 @@ public class DragNShoot : MonoBehaviour
             //sprBall.color = Color.white;
             canReShootFeedback.enabled = false;
         }
+    }
+
+    void ChooseRandomSoundForShoot()
+    {
+        var i = Random.Range(1, 4);
+        Debug.Log(i);
+        AudioManager.Instance.PlaySound("Tir" + i);
     }
 
     public static Vector2[] PreviewPhysics(Rigidbody2D rb, Vector2 pos, Vector2 velocity, int steps)

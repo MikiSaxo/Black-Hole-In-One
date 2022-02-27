@@ -8,6 +8,7 @@ public class BlackHole : MonoBehaviour
     public float maxGravityDist;
     public GameObject ball;
     public Rigidbody2D rbBall;
+    bool isSoundLaunch;
 
     private void Update()
     {
@@ -18,6 +19,23 @@ public class BlackHole : MonoBehaviour
         {
             Vector3 v = ball.transform.position - transform.position;
             rbBall.AddForce(v.normalized * (1f - dist / maxGravityDist) * maxGravity * -1);
+        }
+
+        if (dist <= maxGravityDist)
+        {
+            if (!isSoundLaunch)
+            {
+                isSoundLaunch = true;
+                AudioManager.Instance.PlaySound("BlackHole");
+                //Debug.Log("Launch BlackHole sound");
+                //Debug.Log("isSoundLaunch " + isSoundLaunch);
+            }
+        }
+        else        
+        {
+            isSoundLaunch = false;
+            //AudioManager.Instance.StopSound("BlackHole");
+            //Debug.Log("Stop BlackHole sound");
         }
 
     }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class BumperScript : MonoBehaviour
+public class Bumper : MonoBehaviour
 {
     public Rigidbody2D rbBall;
     public Collider2D c_bumper;
@@ -26,7 +26,7 @@ public class BumperScript : MonoBehaviour
     {
         Debug.Log("touch bumper");
         StartCoroutine(Bump());
-        
+        AudioManager.Instance.PlaySound("Bumper");
     }
 
     IEnumerator Bump()

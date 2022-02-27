@@ -8,8 +8,14 @@ public class MainMenu : MonoBehaviour
     const float timeFadeON = .4f;
     const float timeFadeOFF = .9f;
 
+    private void Start()
+    {
+        
+    }
+
     public void OnClickPlay()
     {
+        AudioManager.Instance.PlaySound("Button");
         StartCoroutine(LaunchMainGame());
         FadeSystem.Instance.MakeFadeON();
     }
@@ -23,6 +29,7 @@ public class MainMenu : MonoBehaviour
 
     public void OnClickQuit()
     {
+        AudioManager.Instance.PlaySound("QuitButton");
         Debug.Log("Quitte le jeu");
         StartCoroutine(LeaveGame());
     }

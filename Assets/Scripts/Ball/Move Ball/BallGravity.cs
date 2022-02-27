@@ -25,6 +25,7 @@ public class BallGravity : MonoBehaviour
             {
                 rb.velocity = Vector2.zero;
                 PauseMenu.Instance.Restart();
+                AudioManager.Instance.PlaySound("Die");
             }
         }
 

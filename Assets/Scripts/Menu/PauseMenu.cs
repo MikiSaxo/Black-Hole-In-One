@@ -50,6 +50,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
+        AudioManager.Instance.PlaySound("Bouton");
         pauseMenuUI.SetActive(false);
         nextLevel.SetActive(false);
         Time.timeScale = 1;
@@ -58,6 +59,7 @@ public class PauseMenu : MonoBehaviour
     }
     public void Pause()
     {
+        AudioManager.Instance.PlaySound("Bouton");
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0;
         GameIsPaused = true;
@@ -65,6 +67,7 @@ public class PauseMenu : MonoBehaviour
 
     public void NextLevel()
     {
+        AudioManager.Instance.PlaySound("Bouton");
         hasChooseLevel++;
         StartCoroutine(TpBall());
         for (int i = 0; i < ManageLevel.Instance.Stars.Length; i++)
@@ -80,6 +83,7 @@ public class PauseMenu : MonoBehaviour
     IEnumerator TpBall()
     {
         ball.transform.position = ManageLevel.Instance.SpawnPoint[ManageLevel.Instance.cntSpawn-1].transform.position;
+        AudioManager.Instance.PlaySound("Spawn");
         yield return new WaitForSeconds(avoidSameTic);
         StartCoroutine(StopBall());
         ManageLevel.Instance.tr.emitting = true;
@@ -87,6 +91,7 @@ public class PauseMenu : MonoBehaviour
 
     public void ChooseALevel(int whichLevel)
     {
+        AudioManager.Instance.PlaySound("SelectLevelButton");
         ball.transform.position = ManageLevel.Instance.SpawnPoint[whichLevel].transform.position;
         hasChooseLevel = whichLevel;
         MakeSldLevelsDisappear();
@@ -105,6 +110,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Restart()
     {
+        AudioManager.Instance.PlaySound("Button");
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         ball.transform.position = ManageLevel.Instance.SpawnPoint[hasChooseLevel].transform.position;
         StartCoroutine(StopBall());
@@ -121,6 +127,7 @@ public class PauseMenu : MonoBehaviour
 
     public void GoToMainMenu()
     {
+        AudioManager.Instance.PlaySound("QuitButton");
         StartCoroutine(GoToMainM());
         MakeFadeON();
     }

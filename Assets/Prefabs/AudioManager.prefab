@@ -46,25 +46,19 @@ MonoBehaviour:
   sounds:
   - name: Tir1
     clip: {fileID: 8300000, guid: 74f32c73d4ceea347a96416af6053dff, type: 3}
-    volume: 0.362
+    volume: 0.191
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Tir2
     clip: {fileID: 8300000, guid: 015fe11f316955b4a827b29eb6f96cdb, type: 3}
-    volume: 1
-    pitch: 0.2514
+    volume: 0.191
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Tir3
     clip: {fileID: 8300000, guid: ba95dea5c6670074080a8082a2d20b41, type: 3}
     volume: 0.362
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Tir4
-    clip: {fileID: 8300000, guid: c5dc96b76a90a8c41b4e946dcd3c25ee, type: 3}
-    volume: 0.318
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -76,7 +70,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: MusicGame
     clip: {fileID: 8300000, guid: c57e105fd8245ae47b526a4474bbfc33, type: 3}
-    volume: 0.371
+    volume: 0.187
     pitch: 1
     loop: 1
     source: {fileID: 0}
@@ -88,7 +82,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: BlackHole
     clip: {fileID: 8300000, guid: 0105f6a9f228d404195b2bf0628f576e, type: 3}
-    volume: 0.371
+    volume: 0.437
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -100,19 +94,19 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Button
     clip: {fileID: 8300000, guid: a3b11a8b5e7bd1f40920133754dbe6fd, type: 3}
-    volume: 0.371
+    volume: 0.252
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: QuitButton
-    clip: {fileID: 8300000, guid: a3b11a8b5e7bd1f40920133754dbe6fd, type: 3}
-    volume: 0.371
+    clip: {fileID: 8300000, guid: 0b960649af2819740bcd34aa19e8d7a9, type: 3}
+    volume: 0.252
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: SelectLevelButton
     clip: {fileID: 8300000, guid: d1d54980e0ca6e84bb43137a72675ac5, type: 3}
-    volume: 0.371
+    volume: 0.215
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -136,6 +130,18 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Victory
     clip: {fileID: 8300000, guid: 4243ca55810881847b4eaf5024499d34, type: 3}
+    volume: 0.252
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: QuitBouton
+    clip: {fileID: 8300000, guid: 0b960649af2819740bcd34aa19e8d7a9, type: 3}
+    volume: 0.252
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Bouton
+    clip: {fileID: 8300000, guid: a3b11a8b5e7bd1f40920133754dbe6fd, type: 3}
     volume: 0.252
     pitch: 1
     loop: 0

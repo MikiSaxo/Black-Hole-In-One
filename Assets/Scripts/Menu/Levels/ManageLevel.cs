@@ -77,6 +77,6 @@ public class ManageLevel : MonoBehaviour
         cntEnd++;
         tr.emitting = false;
         nextLevelMenu.SetActive(true);
-
+        AudioManager.Instance.PlaySound("Victory");
     }
 }
