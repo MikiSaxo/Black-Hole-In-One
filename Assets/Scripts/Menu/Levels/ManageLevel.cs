@@ -61,7 +61,7 @@ public class ManageLevel : MonoBehaviour
                 Stars[0].SetActive(true);
                 howManyStars = 1;
             }
-
+            rb.gravityScale = 1;
             SelectLevels.Instance.UpdateLevelInfos(PauseMenu.Instance.hasChooseLevel, howManyStars);
             howManyShoot = 0;
             cntSpawn++;
