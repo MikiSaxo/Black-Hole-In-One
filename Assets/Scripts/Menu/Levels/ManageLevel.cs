@@ -28,6 +28,7 @@ public class ManageLevel : MonoBehaviour
     private void Start()
     {
         gameObject.transform.position = SpawnPoint[0].transform.position;
+        AudioManager.Instance.PlaySound("MusicMain");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
