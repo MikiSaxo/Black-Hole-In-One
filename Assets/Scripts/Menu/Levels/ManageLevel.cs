@@ -28,7 +28,6 @@ public class ManageLevel : MonoBehaviour
     private void Start()
     {
         gameObject.transform.position = SpawnPoint[0].transform.position;
-        AudioManager.Instance.PlaySound("MusicMain");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -36,6 +35,7 @@ public class ManageLevel : MonoBehaviour
         if (collision == EndPoint[PauseMenu.Instance.hasChooseLevel])
         {
             Debug.Log("endpoint");
+            AudioManager.Instance.PlaySound("Endlevel");
             StartCoroutine(Transi());
             camRipple.RippleEffect();
             rb.velocity = Vector2.zero;

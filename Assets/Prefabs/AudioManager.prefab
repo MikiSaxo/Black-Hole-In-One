@@ -1,0 +1,142 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3239627130359430330
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3239627130359430332}
+  - component: {fileID: 3239627130359430333}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3239627130359430332
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3239627130359430330}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3146.9111, y: 1041.898, z: -26.25545}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3239627130359430333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3239627130359430330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a967e8bbc1dac2c47a8ba64ce52aea02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Tir1
+    clip: {fileID: 8300000, guid: 74f32c73d4ceea347a96416af6053dff, type: 3}
+    volume: 0.362
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Tir2
+    clip: {fileID: 8300000, guid: 015fe11f316955b4a827b29eb6f96cdb, type: 3}
+    volume: 1
+    pitch: 0.2514
+    loop: 0
+    source: {fileID: 0}
+  - name: Tir3
+    clip: {fileID: 8300000, guid: ba95dea5c6670074080a8082a2d20b41, type: 3}
+    volume: 0.362
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Tir4
+    clip: {fileID: 8300000, guid: c5dc96b76a90a8c41b4e946dcd3c25ee, type: 3}
+    volume: 0.318
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: MusicMain
+    clip: {fileID: 8300000, guid: 4adaec61366028f4baa0c005e27f1a51, type: 3}
+    volume: 0.371
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: MusicGame
+    clip: {fileID: 8300000, guid: c57e105fd8245ae47b526a4474bbfc33, type: 3}
+    volume: 0.371
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Rebund
+    clip: {fileID: 8300000, guid: 903bbfead8991b24a933fcd4a47764fe, type: 3}
+    volume: 0.371
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: BlackHole
+    clip: {fileID: 8300000, guid: 0105f6a9f228d404195b2bf0628f576e, type: 3}
+    volume: 0.371
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Bumper
+    clip: {fileID: 8300000, guid: 4553611965c8a754d9027a19b406cc3b, type: 3}
+    volume: 0.371
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Button
+    clip: {fileID: 8300000, guid: a3b11a8b5e7bd1f40920133754dbe6fd, type: 3}
+    volume: 0.371
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: QuitButton
+    clip: {fileID: 8300000, guid: a3b11a8b5e7bd1f40920133754dbe6fd, type: 3}
+    volume: 0.371
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: SelectLevelButton
+    clip: {fileID: 8300000, guid: d1d54980e0ca6e84bb43137a72675ac5, type: 3}
+    volume: 0.371
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Die
+    clip: {fileID: 8300000, guid: a91d5ca3ff069884eac4a7932eaa8bd5, type: 3}
+    volume: 0.371
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Spawn
+    clip: {fileID: 8300000, guid: cacdffd6da115124b9c98afd67d5759f, type: 3}
+    volume: 0.371
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: EndLevel
+    clip: {fileID: 8300000, guid: e19db1a91efa8d54a92c73d94c40e679, type: 3}
+    volume: 0.371
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Victory
+    clip: {fileID: 8300000, guid: 4243ca55810881847b4eaf5024499d34, type: 3}
+    volume: 0.252
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
