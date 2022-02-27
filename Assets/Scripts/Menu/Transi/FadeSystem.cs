@@ -7,6 +7,8 @@ using UnityEngine;
 public class FadeSystem : MonoBehaviour
 {
     public Image fade;
+    public GameObject title;
+    public GameObject main;
     const float timeFadeON = .4f;
     const float timeFadeOFF = .9f;
 
@@ -21,6 +23,14 @@ public class FadeSystem : MonoBehaviour
         MakeFadeOff();
     }
 
+    private void Update()
+    {
+        if (Input.anyKey)
+        {
+            MakeTitleOff();
+        }
+    }
+
     public void MakeFadeON()
     {
         fade.DOFade(1, timeFadeON);
@@ -28,5 +38,18 @@ public class FadeSystem : MonoBehaviour
     public void MakeFadeOff()
     {
         fade.DOFade(0, timeFadeOFF);
+    }
+    public void MakeTitleOff()
+    {
+        StartCoroutine(TransiTitleToMenu());
+    }
+
+    IEnumerator TransiTitleToMenu()
+    {
+        MakeFadeON();
+        yield return new WaitForSeconds(timeFadeON);
+        title.SetActive(false);
+        main.SetActive(true);
+        MakeFadeOff();
     }
 }
