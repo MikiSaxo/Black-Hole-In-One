@@ -18,8 +18,7 @@ GameObject:
   - component: {fileID: 8625535493795310729}
   - component: {fileID: 1519823854}
   - component: {fileID: 1519823853}
-  - component: {fileID: 8662874971412059655}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 32dcb1faad1a19740babb5e86dce735a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -140,17 +139,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 156d3644449233945a53343e0905a27f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power: 60
+  power: 100
   ValueToReShoot: 0.11
   rb: {fileID: 8625535493795310740}
   sprBall: {fileID: 8625535493795310742}
   reShootCollider:
   - {fileID: 0}
   - {fileID: 0}
+  canReShootFeedback: {fileID: 0}
   saveCollider: {fileID: 0}
   timeScaleInZone: 0.5
   minPower: {x: -10, y: -10}
   maxPower: {x: 10, y: 10}
+  force: {x: 0, y: 0}
+  startPoint: {x: 0, y: 0, z: 0}
+  endPoint: {x: 0, y: 0, z: 0}
+  lr: {fileID: 0}
 --- !u!114 &8625535493795310731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,10 +170,14 @@ MonoBehaviour:
   topCollider:
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
   downCollider:
   - {fileID: 0}
   - {fileID: 0}
   colliderCancel:
+  - {fileID: 0}
+  - {fileID: 0}
+  pics:
   - {fileID: 0}
   - {fileID: 0}
 --- !u!114 &8625535493795310730
@@ -409,10 +417,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   howManyShoot: 0
-  howManyShootNeeded: 
-  Stars: []
+  howManyShootNeeded: 0100000032000000020000000000000000000000
+  howManyStars: 0
   tr: {fileID: 1519823854}
+  Stars:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   SpawnPoint:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -427,16 +444,3 @@ MonoBehaviour:
   cntEnd: 0
   cntSpawn: 1
   camRipple: {fileID: 0}
---- !u!114 &8662874971412059655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8625535493795310739}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0da9237158bc84e42937d3327976ffdc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 8625535493795310740}
