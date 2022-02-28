@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FadeSystem : MonoBehaviour
 {
@@ -53,5 +54,10 @@ public class FadeSystem : MonoBehaviour
         title.SetActive(false);
         main.SetActive(true);
         MakeFadeOff();
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(0);
     }
 }

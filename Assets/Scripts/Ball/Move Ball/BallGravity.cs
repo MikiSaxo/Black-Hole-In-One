@@ -15,8 +15,6 @@ public class BallGravity : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         for (int h = 0; h < pics.Length; h++)

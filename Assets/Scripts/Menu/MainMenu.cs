@@ -8,10 +8,6 @@ public class MainMenu : MonoBehaviour
     const float timeFadeON = .4f;
     const float timeFadeOFF = .9f;
 
-    private void Start()
-    {
-        
-    }
 
     public void OnClickPlay()
     {

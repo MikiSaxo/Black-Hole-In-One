@@ -1157,15 +1157,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Game Developper : Charlet Samuel
+  m_text: 'Credits:
+
+    Game Developper: Charlet Samuel
 
 
-    Game Designer : Gontier Luc, Hode
-    Sacha, Cailles Jean-Charles
+    Game Designer: Gontier
+    Luc, Hode Sacha, Cailles Jean-Charles
 
 
-    Game Artist : Detollenaere Tristan, Vandeweghe
-    Louise'
+    Game Artist: Detollenaere Tristan,
+    Vandeweghe Louise'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5b64b075bf88346458800da92f1084fc, type: 2}
   m_sharedMaterial: {fileID: -7423204613753120505, guid: 5b64b075bf88346458800da92f1084fc, type: 2}

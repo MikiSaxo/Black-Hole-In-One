@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ManageLevel : MonoBehaviour
 {
@@ -31,9 +32,13 @@ public class ManageLevel : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
-    {
+    { 
         if (collision == EndPoint[PauseMenu.Instance.hasChooseLevel])
         {
+            if (EndPoint[PauseMenu.Instance.hasChooseLevel] == EndPoint[EndPoint.Length - 1])
+            {
+                SceneManager.LoadScene(2);
+            }
             Debug.Log("endpoint");
             AudioManager.Instance.PlaySound("Endlevel");
             StartCoroutine(Transi());
