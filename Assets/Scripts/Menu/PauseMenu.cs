@@ -115,6 +115,7 @@ public class PauseMenu : MonoBehaviour
         ball.transform.position = ManageLevel.Instance.SpawnPoint[hasChooseLevel].transform.position;
         StartCoroutine(StopBall());
         Time.timeScale = 1f;
+        rbBall.gravityScale = 1;
         GameIsPaused = false;
         pauseMenuUI.SetActive(false);
         ManageLevel.Instance.howManyShoot = 0;
