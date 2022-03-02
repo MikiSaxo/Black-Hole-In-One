@@ -32,47 +32,51 @@ public class ManageLevel : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
-    { 
-        if (collision == EndPoint[PauseMenu.Instance.hasChooseLevel])
+    {
+        for (int j = 0; j < EndPoint.Length; j++)
         {
-            if (EndPoint[PauseMenu.Instance.hasChooseLevel] == EndPoint[EndPoint.Length - 1])
+
+            if (collision == EndPoint[j])
             {
-                SceneManager.LoadScene(2);
-            }
-            Debug.Log("endpoint");
-            AudioManager.Instance.PlaySound("Endlevel");
-            StartCoroutine(Transi());
-            camRipple.RippleEffect();
-            rb.velocity = Vector2.zero;
-            if (howManyShoot <= howManyShootNeeded[PauseMenu.Instance.hasChooseLevel])
-            {
-                howManyStars = 3;
-                Debug.Log("Active 3 étoiles");
-                for (int i = 0; i < Stars.Length; i++)
+                if (EndPoint[j] == EndPoint[EndPoint.Length - 1])
                 {
-                    Stars[i].SetActive(true);
+                    SceneManager.LoadScene(2);
                 }
-            }
-            else if (howManyShoot > howManyShootNeeded[PauseMenu.Instance.hasChooseLevel] && howManyShoot <= howManyShootNeeded[PauseMenu.Instance.hasChooseLevel] + 2)
-            {
-                howManyStars = 2;
-                Debug.Log("Active 2 étoiles");
-                for (int i = 0; i < Stars.Length - 1; i++)
+                Debug.Log("endpoint");
+                AudioManager.Instance.PlaySound("Endlevel");
+                StartCoroutine(Transi());
+                camRipple.RippleEffect();
+                rb.velocity = Vector2.zero;
+                if (howManyShoot <= howManyShootNeeded[PauseMenu.Instance.hasChooseLevel])
                 {
-                    Stars[i].SetActive(true);
+                    howManyStars = 3;
+                    Debug.Log("Active 3 étoiles");
+                    for (int i = 0; i < Stars.Length; i++)
+                    {
+                        Stars[i].SetActive(true);
+                    }
                 }
+                else if (howManyShoot > howManyShootNeeded[PauseMenu.Instance.hasChooseLevel] && howManyShoot <= howManyShootNeeded[PauseMenu.Instance.hasChooseLevel] + 2)
+                {
+                    howManyStars = 2;
+                    Debug.Log("Active 2 étoiles");
+                    for (int i = 0; i < Stars.Length - 1; i++)
+                    {
+                        Stars[i].SetActive(true);
+                    }
+                }
+                else
+                {
+                    Stars[0].SetActive(true);
+                    howManyStars = 1;
+                }
+                rb.gravityScale = 1;
+                SelectLevels.Instance.UpdateLevelInfos(PauseMenu.Instance.hasChooseLevel, howManyStars);
+                howManyShoot = 0;
+                cntSpawn++;
+                PauseMenu.Instance.GameIsPaused = true;
+                //Time.timeScale = 0f;
             }
-            else
-            {
-                Stars[0].SetActive(true);
-                howManyStars = 1;
-            }
-            rb.gravityScale = 1;
-            SelectLevels.Instance.UpdateLevelInfos(PauseMenu.Instance.hasChooseLevel, howManyStars);
-            howManyShoot = 0;
-            cntSpawn++;
-            PauseMenu.Instance.GameIsPaused = true;
-            //Time.timeScale = 0f;
         }
     }
 

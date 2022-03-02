@@ -153,6 +153,8 @@ public class DragNShoot : MonoBehaviour
         }
         else
         {
+            startPoint = rb.transform.position;
+            startPoint.z = 15;
             //sprBall.color = Color.white;
             canReShootFeedback.enabled = false;
         }
